@@ -1,0 +1,19 @@
+#!/bin/bash
+
+pkg_man=dnf
+sudo=doas
+
+if [ "$1" ]; then
+  case "$1" in
+    i)         "$pkg_man" install "$2" ;;
+    si)  $sudo "$pkg_man" install "$2" ;;
+    r)         "$pkg_man" remove  "$2" ;;
+    sr)  $sudo "$pkg_man" remove  "$2" ;;
+    up)        "$pkg_man" update       ;;
+	sup) $sudo "$pkg_man" update       ;;
+
+    *)  echo "unknown command" ;;
+  esac
+else
+  echo "Please specify command"
+fi
