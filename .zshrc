@@ -20,3 +20,4 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.config/zsh/dir_colors)
 . ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . ~/.config/zsh/aliasrc
 . ~/.config/zsh/xdg.sh
+. ~/.config/zsh/.zshenv

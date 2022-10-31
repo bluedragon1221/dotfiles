@@ -4,6 +4,8 @@ alias ls="ls -FA1 --color"
 alias sudo="doas"
 alias s="doas"
 
+alias bspwm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 bspwm"
+
 export EDITOR=micro
 
 mkcd() {
