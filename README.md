@@ -11,3 +11,4 @@ git fetch
 git checkout -f main
 ```
 
+add files using `git add -f [file]`
