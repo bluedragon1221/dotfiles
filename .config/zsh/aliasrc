@@ -1,10 +1,11 @@
 #!/bin/bash
 
-alias ls="ls -FA1 --color"
+alias ls="exa -Fa1 --icons"
 alias sudo="doas"
 alias s="doas"
+alias tree="exa -T"
 
-alias bspwm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 bspwm"
+alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 
 export EDITOR=micro
 

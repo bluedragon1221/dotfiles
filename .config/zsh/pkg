@@ -1,16 +1,19 @@
 #!/bin/bash
 
-pkg_man=dnf
+pkg=dnf
+# sudo=sudo
 sudo=doas
 
 if [ "$1" ]; then
   case "$1" in
-    i)         "$pkg_man" install "$2" ;;
-    si)  $sudo "$pkg_man" install "$2" ;;
-    r)         "$pkg_man" remove  "$2" ;;
-    sr)  $sudo "$pkg_man" remove  "$2" ;;
-    up)        "$pkg_man" update       ;;
-	sup) $sudo "$pkg_man" update       ;;
+    i)         "$pkg" install "$2" ;;
+    si)  $sudo "$pkg" install "$2" ;;
+    r)         "$pkg" remove  "$2" ;;
+    sr)  $sudo "$pkg" remove  "$2" ;;
+    up)        "$pkg" update       ;;
+	sup) $sudo "$pkg" update       ;;
+	c)         "$pkg" clean all    ;;
+	sc)  $sudo "$pkg" clean all    ;;
 
     *)  echo "unknown command" ;;
   esac

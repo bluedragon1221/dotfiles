@@ -1,3 +1,4 @@
+#https://github.com/christitustech/mybash
 format = """
  \
 [](#3B4252)\
@@ -46,7 +47,7 @@ truncation_symbol = "…/"
 "Downloads" = ""
 "Music" = ""
 "Pictures" = ""
-"git" = ""
+"git" = ""
 "~" = ""
 ".config" = ""
 "coding" = ""
