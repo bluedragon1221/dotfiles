@@ -1,7 +1,0 @@
-gnome-tweaks
-
-starship
-micro
-alacritty
-opendoas
-zsh

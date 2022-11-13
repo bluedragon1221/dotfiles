@@ -11,8 +11,10 @@ autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # prompt (starship)
-eval "$(starship init zsh)"
-# PS1="%F{blue}%~%f %(?.%F{green}.%F{red})%%%f "
+# eval "$(starship init zsh)"
+PS1="%F{blue}%~%f %(?.%F{green}.%F{red})%%%f "
+
+PATH=~/bin/:$PATH
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.config/zsh/dir_colors)
 
