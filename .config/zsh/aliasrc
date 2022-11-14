@@ -1,23 +1,20 @@
 #!/bin/bash
 
-alias hostname="cat /etc/hostname"
+command -v exa >/dev/null && alias ls="exa -Fa1 --icons --group-directories-first"
+command -v exa >/dev/null || alias ls="ls -FA1 --color=auto"
 
-if [ "$(hostname)" = "laptop" ]; then
-	source ~/.config/zsh/aliasrc_laptop
-fi
-
-alias ls="exa -Fa1 --icons"
 alias sudo="doas"
 alias s="doas"
 alias tree="exa -T"
 alias wget="curl -O -C "
+alias cdtemp='cd $(mktemp -d)'
 
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 
 export EDITOR=micro
 
 mkcd() {
-  mkdir -p "$@" && cd "$_";
+  mkdir -p "$@" && cd "$_" || exit
 }
 
 alias mkdir='mkcd'

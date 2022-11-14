@@ -1,3 +1,9 @@
 [submodule ".config/micro/plug/nordcolors"]
 	path = .config/micro/plug/nordcolors
 	url = https://github.com/KiranWells/micro-nord-tc-colors
+[submodule ".config/zsh/zsh-autosuggestions"]
+	path = .config/zsh/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions
+[submodule ".config/zsh/zsh-syntax-highlighting"]
+	path = .config/zsh/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting

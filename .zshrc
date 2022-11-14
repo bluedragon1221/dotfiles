@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+
 HISTFILE=~/.local/state/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -11,10 +12,11 @@ autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # prompt (starship)
-# eval "$(starship init zsh)"
-PS1="%F{blue}%~%f %(?.%F{green}.%F{red})%%%f "
+eval "$(starship init zsh)"
+# PS1="%F{blue}%~%f %(?.%F{green}.%F{red})%%%f "
 
-PATH=~/bin/:$PATH
+PATH=~/bin:$PATH
+export EDITOR=micro
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.config/zsh/dir_colors)
 
