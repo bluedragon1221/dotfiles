@@ -73,9 +73,6 @@ super + {_,shift + }c
 super + {Left,Right}
 	bspc desktop -f {prev,next}
 
-@button{10,11}
-    bspc desktop -f {prev,next}
-
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
@@ -88,7 +85,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '^{1-9,0}'
 
 super + {Left,Right}
   	bspc desktop -f {prev,next}.local

@@ -16,7 +16,7 @@ eval "$(starship init zsh)"
 # PS1="%F{blue}%~%f %(?.%F{green}.%F{red})%%%f "
 
 PATH=~/bin:$PATH
-export EDITOR=micro
+EDITOR=micro
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.config/zsh/dir_colors)
 

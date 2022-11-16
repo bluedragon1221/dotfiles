@@ -1,14 +1,13 @@
 #https://github.com/christitustech/mybash
 format = """
- \
-[](#3B4252)\
+[ \ue0c5](#3B4252)\
 $username\
-[](bg:#434C5E fg:#3B4252)\
+[\ue0c4](bg:#434C5E fg:#3B4252)\
 $directory\
-[](fg:#434C5E bg:#4C566A)\
+[\ue0c4](fg:#434C5E bg:#4C566A)\
 $git_branch\
 $git_status\
-[](fg:#4C566A bg:#86BBD8)\
+[\ue0c4](fg:#4C566A bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -19,7 +18,7 @@ $nim\
 $rust\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
 """
@@ -43,7 +42,7 @@ truncation_symbol = "…/"
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = "🗎"
+"Documents" = ""
 "Downloads" = ""
 "Music" = ""
 "Pictures" = ""

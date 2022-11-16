@@ -5,6 +5,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
-export HISTFILE="${XDG_STATE_HOME}"/bash/history
-export LESSHISTFILE="$XDG_STATE_HOME"/less/history
-export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export LESSHISTFILE=/dev/null
+export XAUTHORITY=/tmp/Xauthority
+export CARGO_HOME=~/.local/share/cargo
+export RUSTUP_HOME=~/.local/share/rustup
