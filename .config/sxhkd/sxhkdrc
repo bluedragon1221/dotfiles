@@ -7,7 +7,7 @@ super + x
 	 bspc desktop -f '^2'; alacritty
 
 super + b
-	bspc desktop -f '^1'; firefox
+	bspc desktop -f '^1'; qutebrowser
 
 # program launcher
 super + @space
