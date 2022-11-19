@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
+#sudo=sudo
+sudo=doas
+
+if [ "$1" ]; then
+  case "$1" in
+    i)         apt install "$2" ;;
+    si)  $sudo apt install "$2" ;;
+    r)         apt remove "$2"  ;;
+    sr)  $sudo apt remove "$2"  ;;
+    up)        apt update &&       apt upgrade ;;
+	sup) $sudo apt update && $sudo apt ugrade  ;;
+    *)  echo "unknown command" ;;
+  esac
+else
+  echo "Please specify command"
+fi
