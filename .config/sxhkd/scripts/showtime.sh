@@ -1,8 +1,8 @@
 #!/bin/bash
-############################################################################
-# Script to display desktop name/number - requires dzen2                   #
-# reddit.com/r/bspwm/comments/lhvtw7/osd_notifications_on_changing_desktop #
-###########################################################################
+
+##########################################################
+# Script to display desktop name/number - requires dzen2 #
+##########################################################
 [ ! -f "/usr/bin/dzen2" ] && exit || echo "Dzen2 exists"
 
 # Display Variables:
@@ -27,7 +27,7 @@ res_hgt="${full_res##*x}"
 x=$((a=res_wid-wid, xx=a/2))
 y=$((b=res_hgt-hgt-2, yy=b/2))
 
-Deskname=$(bspc query -D -d focused --names)
+got_time=$(date +'%l:%M')
 
 # Display desktop number centre screen:
-echo "$Deskname" | dzen2 -fg "$fgcolour" -bg "$bgcolour" -w $wid -x $x -y $y -p $time -fn "$font"
+echo "$got_time" | dzen2 -fg "$fgcolour" -bg "$bgcolour" -w $wid -x $x -y $y -p $time -fn "$font"
