@@ -1,6 +1,6 @@
 #https://github.com/christitustech/mybash
 format = """
-[ \ue0c5](#3B4252)\
+[ \ue0b6](#3B4252)\
 $username\
 [\ue0c4](bg:#434C5E fg:#3B4252)\
 $directory\
@@ -16,11 +16,11 @@ $java\
 $julia\
 $nim\
 $rust\
-[](fg:#86BBD8 bg:#06969A)\
+[\ue0b0](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[\ue0b0](fg:#06969A bg:#33658A)\
 $time\
-[ ](fg:#33658A)\
+[\ue0b4 ](fg:#33658A)\
 """
 command_timeout = 5000
 # Disable the blank line at the start of the prompt

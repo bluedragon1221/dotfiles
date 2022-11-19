@@ -4,10 +4,10 @@
 
 # terminal emulator
 super + x
-	alacritty
+	 bspc desktop -f '^2'; alacritty
 
 super + b
-	firefox
+	bspc desktop -f '^1'; firefox
 
 # program launcher
 super + @space
@@ -50,12 +50,13 @@ super + {t,shift + t,s,f}
 #
 
 # focus the next/previous desktop; run workspace number script
-super + {Left,Right}
-	bspc desktop -f {prev,next}; ~/.config/sxhkd/desknum.sh
+super + {_,shift + }{Left,Right}
+	bspc {desktop -f,node -d} {prev,next}; ~/.config/sxhkd/scripts/desknum.sh
 
 # focus or send to the given desktop
-super + {_,shift + }{0-9}
-	bspc {desktop -f,node -d} '^{0-9}'; ~/.config/sxhkd/desknum.sh
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,0}'; ~/.config/sxhkd/scripts/desknum.sh
+
 
 
 #
@@ -93,3 +94,6 @@ XF86AudioLowerVolume
     pactl set-sink-volume 0 -5%; ~/.config/sxhkd/scripts/volperc.sh
 XF86AudioMute
     pactl set-sink-mute 0 toggle; ~/.config/sxhkd/scripts/volperc.sh
+
+super + z
+    ~/.config/sxhkd/scripts/showtime.sh

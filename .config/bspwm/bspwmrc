@@ -5,6 +5,8 @@ picom --config ~/.config/picom/picom.conf &
 
 xwallpaper --zoom ~/Pictures/wallpaper/wallhaven-zyxvqy_1366x768.png
 
+setxkbmap -option ctrl:nocaps
+
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 bspc config border_width         2
@@ -16,6 +18,6 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Firefox desktop='^1'
-bspc rule -a Alacritty desktop='^2'
+bspc rule -a firefox desktop='^1'
+bspc rule -a alacritty desktop='^2'
 bspc rule -a mplayer2 state=floating

@@ -25,7 +25,7 @@ res_hgt="${full_res##*x}"
 x=$((a=res_wid-wid, xx=a/2))
 y=$((b=res_hgt-hgt-2, yy=b/2))
 
-text=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+volume=$(pamixer --get-volume)
 
 # Display desktop number centre screen:
-echo "$text" | dzen2 -fg "$fgcolour" -bg "$bgcolour" -w $wid -x $x -y $y -p $time -fn "$font"
+echo "${volume}%" | dzen2 -fg "$fgcolour" -bg "$bgcolour" -w $wid -x $x -y $y -p $time -fn "$font"
