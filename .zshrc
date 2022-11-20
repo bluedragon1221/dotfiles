@@ -1,1 +1,0 @@
-/home/collin/.config/zsh/.zshrc

@@ -3,8 +3,6 @@
 command -v exa >/dev/null && alias ls="exa -Fa1 --icons --group-directories-first"
 command -v exa >/dev/null || alias ls="ls -FA1 --color=auto"
 
-alias fd="sudo find / -name "
-
 alias sudo="doas"
 alias s="doas"
 alias tree="exa -T"
