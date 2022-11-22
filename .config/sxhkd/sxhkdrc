@@ -7,7 +7,7 @@ super + x
 	 bspc desktop -f '^2'; alacritty
 
 super + b
-	bspc desktop -f '^1'; qutebrowser
+	bspc desktop -f '^1'; surf duckduckgo.com
 
 # program launcher
 super + @space
@@ -51,11 +51,11 @@ super + {t,shift + t,s,f}
 
 # focus the next/previous desktop; run workspace number script
 super + {_,shift + }{Left,Right}
-	bspc {desktop -f,node -d} {prev,next}; ~/.config/sxhkd/scripts/desknum.sh
+	bspc {desktop -f,node -d} {prev,next}; dzen2-blob $(bspc query -D -d focused --names)
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,0}'; ~/.config/sxhkd/scripts/desknum.sh
+	bspc {desktop -f,node -d} '^{1-9,0}'; dzen2-blob $(bspc query -D -d focused --names)
 
 
 
@@ -88,12 +88,11 @@ super + alt + {Left,Down,Up,Right}
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
-XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%; ~/.config/sxhkd/scripts/volperc.sh
-XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%; ~/.config/sxhkd/scripts/volperc.sh
-XF86AudioMute
-    pactl set-sink-mute 0 toggle; ~/.config/sxhkd/scripts/volperc.sh
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+    pactl set-sink-volume 0 {+5%, -5%, toggle}; dzen2-blob $(pamixer --get-volume)
 
 super + z
-    ~/.config/sxhkd/scripts/showtime.sh
+    dzen2-blob $(date +'%I:%M')
+
+ctrl + alt + Delete
+	shutdown now

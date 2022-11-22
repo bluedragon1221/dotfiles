@@ -1,3 +1,4 @@
+# https://github.com/ChrisTitusTech/mybash
 format = """
 [](#3B4252)\
 $username\
@@ -14,7 +15,6 @@ $golang\
 $haskell\
 $java\
 $julia\
-$nodejs\
 $nim\
 $rust\
 [](fg:#86BBD8 bg:#06969A)\
@@ -54,22 +54,22 @@ truncation_symbol = "…/"
 # "Important  " = "  "
 
 [c]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
-symbol = " "
+symbol = ""
 style = "bg:#06969A"
 format = '[ $symbol $context ]($style) $path'
 
 [elixir]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
@@ -83,22 +83,22 @@ style = "bg:#4C566A"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
@@ -108,7 +108,7 @@ style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
-symbol = " "
+symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 

@@ -9,12 +9,14 @@ alias tree="exa -T"
 alias wget="curl -O -C "
 alias cdtemp='cd $(mktemp -d)'
 
+alias su="doas -s"
+
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 
 export EDITOR=micro
 
 mkcd() {
-  mkdir -p "$@" && cd "$_" || exit
+  mkdir -pv "$@" && cd "$_" || exit
 }
 
 alias mkdir='mkcd'
