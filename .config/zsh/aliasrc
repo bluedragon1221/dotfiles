@@ -8,10 +8,16 @@ alias s="doas"
 alias tree="exa -T"
 alias wget="curl -O -C "
 alias cdtemp='cd $(mktemp -d)'
-
 alias su="doas -s"
-
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
+
+# typos
+alias sl="ls"
+alias l="ls"
+alias celar="clear"
+alias lcear="clear"
+alias cclear="clear"
+alias cleara="clear"
 
 export EDITOR=micro
 

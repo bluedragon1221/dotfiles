@@ -1,20 +1,16 @@
 #!/bin/bash
-
 set -euo pipefail
 IFS=$'\n\t'
 
-#sudo=sudo
-sudo=doas
-
 if [ "$1" ]; then
   case "$1" in
-    i)         dnf install "$2" ;;
-    si)  $sudo dnf install "$2" ;;
-    r)         dnf remove "$2"  ;;
-    sr)  $sudo dnf remove "$2"  ;;
-    up)        dnf update       ;;
-	sup) $sudo dnf update       ;;
-    *)  echo "unknown command"  ;;
+    i)        dnf install "$2" ;;
+    si)  doas dnf install "$2" ;;
+    r)        dnf remove "$2"  ;;
+    sr)  doas dnf remove "$2"  ;;
+    up)       dnf update       ;;
+	sup) doas dnf update       ;;
+    *)  echo "unknown command" ;;
   esac
 else
   echo "Please specify command"
