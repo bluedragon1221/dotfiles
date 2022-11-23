@@ -1,4 +1,6 @@
 {
-    "colorscheme": "gotham",
+    "colorscheme": "nord-16",
+    "statusformatl": "$(filename):$(line):$(col)$(modified) $(filetype)",
+    "statusformatr": "",
     "sucmd": "doas"
 }

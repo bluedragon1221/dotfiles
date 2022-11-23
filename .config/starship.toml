@@ -11,6 +11,7 @@ $git_status\
 $c\
 $elixir\
 $elm\
+$nodejs\
 $golang\
 $haskell\
 $java\
@@ -90,7 +91,7 @@ format = '[ $symbol ($version) ]($style)'
 [haskell]
 symbol = ""
 style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol ]($style)'
 
 [java]
 symbol = ""
@@ -105,7 +106,7 @@ format = '[ $symbol ($version) ]($style)'
 [nodejs]
 symbol = ""
 style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol ]($style)'
 
 [nim]
 symbol = ""
@@ -119,6 +120,6 @@ format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
-time_format = "%I:%M" # Hour:Minute Format
+time_format = "%I:%M" # 12 Hour:Minute Format
 style = "bg:#33658A"
 format = '[ $time ]($style)'

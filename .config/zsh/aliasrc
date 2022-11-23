@@ -1,28 +1,25 @@
 #!/bin/bash
 
-command -v exa >/dev/null && alias ls="exa -Fa1 --icons --group-directories-first"
-command -v exa >/dev/null || alias ls="ls -FA1 --color=auto"
-
+#doas
 alias sudo="doas"
 alias s="doas"
-alias tree="exa -T"
-alias wget="curl -O -C "
-alias cdtemp='cd $(mktemp -d)'
 alias su="doas -s"
-alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 
-# typos
-alias sl="ls"
-alias l="ls"
-alias celar="clear"
-alias lcear="clear"
-alias cclear="clear"
-alias cleara="clear"
+#exa
+alias ls="exa -a1 --icons --group-directories-first"
+alias tree="exa -T"
 
-export EDITOR=micro
-
+#cd
+alias cdtemp='cd $(mktemp -d)'
 mkcd() {
-  mkdir -pv "$@" && cd "$_" || exit
+	mkdir -pv "$@" && cd "$_" || exit
 }
-
 alias mkdir='mkcd'
+
+
+alias wget="curl -O -C "
+alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
+alias neofetch="pfetch"
+alias cat="bat"
+
+alias l="ls"
