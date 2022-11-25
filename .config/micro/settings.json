@@ -1,5 +1,6 @@
 {
     "colorscheme": "nord-16",
+    "ruler": false,
     "statusformatl": "$(filename):$(line):$(col)$(modified) $(filetype)",
     "statusformatr": "",
     "sucmd": "doas"
