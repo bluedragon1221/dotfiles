@@ -3,9 +3,9 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --config ~/.config/picom/picom.conf &
 
-xwallpaper --zoom ~/Pictures/wallpaper/wallhaven-zyxvqy_1366x768.png
+xwallpaper --zoom ~/Pictures/wallpaper/current
 
-setxkbmap -option ctrl:nocaps
+setxkbmap -option caps:super
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
@@ -17,9 +17,6 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a qutebrowser desktop='^1'
 bspc rule -a firefox desktop='^1'
 bspc rule -a alacritty desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a class=surf state=tiling
