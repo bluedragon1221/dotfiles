@@ -7,7 +7,7 @@ super + x
 	 bspc desktop -f '^2'; alacritty
 
 super + b
-	bspc desktop -f '^1'; surf duckduckgo.com
+	bspc desktop -f '^1'; firefox
 
 # program launcher
 super + @space
