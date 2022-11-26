@@ -1,11 +1,8 @@
-#
-# wm independent hotkeys
-#
-
-# terminal emulator
+# terminal
 super + x
 	 bspc desktop -f '^2'; alacritty
 
+# browser
 super + b
 	bspc desktop -f '^1'; firefox
 
@@ -13,83 +10,41 @@ super + b
 super + @space
 	dmenu_run
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
-#
-# bspwm hotkeys
-#
+### BSPWM HOTKEYS ###
 
 # quit/restart bspwm
-super + shift + {q,r}
-	bspc {quit, wm -r}
+super + r
+	bspc wm -r && pkill -USR1 -x sxhkd
 
 # close and kill
-super + q
-	bspc node -c
-
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
+super + {_,shift} + q
+	bspc {node -c, quit}
 
 # swap the current node and the biggest window
 super + g
 	bspc node -s biggest.window
 
-#
-# state/flags
-#
-
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-#
-# focus/swap
-#
-
-# focus the next/previous desktop; run workspace number script
+# focus the next/previous desktop
 super + {_,shift + }{Left,Right}
-	bspc {desktop -f,node -d} {prev,next}; dzen2-blob $(bspc query -D -d focused --names)
+	bspc {desktop -f,node -d} {prev,next} && dzen2-blob $(bspc query -D -d focused --names)
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,0}'; dzen2-blob $(bspc query -D -d focused --names)
-
-
-
-#
-# preselect
-#
-
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
-# move/resize
-#
+	bspc {desktop -f,node -d} '^{1-9,0}' && dzen2-blob $(bspc query -D -d focused --names)
 
 super + alt + {Left,Down,Up,Right}
-    STEP=20; SELECTION={1,2,3,4}; \
+    STEP=10; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
+### EXTRA ###
+
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-    pactl set-sink-volume 0 {+5%, -5%, toggle}; dzen2-blob $(pamixer --get-volume)
+    pactl set-sink-volume 0 {+5%, -5%, toggle} && dzen2-blob $(pamixer --get-volume)
 
 super + z
     dzen2-blob $(date +'%I:%M')
