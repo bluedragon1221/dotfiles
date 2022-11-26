@@ -94,5 +94,8 @@ super + alt + {Left,Down,Up,Right}
 super + z
     dzen2-blob $(date +'%I:%M')
 
+super + a
+	dzen2-blob $(acpi | awk '{print $4}')
+
 ctrl + alt + Delete
 	shutdown now
