@@ -13,7 +13,7 @@ super + @space
 ### BSPWM HOTKEYS ###
 
 # quit/restart bspwm
-super + r
+super + {_,shift} + r
 	bspc wm -r && pkill -USR1 -x sxhkd
 
 # close and kill
@@ -45,6 +45,10 @@ super + alt + {Left,Down,Up,Right}
 
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
     pactl set-sink-volume 0 {+5%, -5%, toggle} && dzen2-blob $(pamixer --get-volume)
+
+shift + {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+    pactl set-sink-volume 0 {+1%, -1%, toggle} && dzen2-blob $(pamixer --get-volume)
+
 
 super + z
     dzen2-blob $(date +'%I:%M')
