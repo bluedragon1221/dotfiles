@@ -6,9 +6,21 @@ super + x
 super + b
 	bspc desktop -f '^1'; firefox
 
+super + o
+	bspc desktop -f '^3'; obsidian
+
+super + n
+	bspc desktop -f '^4'; neovide
+
+super + p
+	picom --config ~/.config/picom/picom.conf
+
+super + shift + p
+	killall picom
+
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show combi
 
 ### BSPWM HOTKEYS ###
 

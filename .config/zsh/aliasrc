@@ -15,7 +15,5 @@ mkcd() {
 }
 alias mkdir='mkcd'
 
-
-alias wget="curl -O -C "
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 alias neofetch="pfetch"
