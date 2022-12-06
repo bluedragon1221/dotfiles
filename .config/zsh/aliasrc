@@ -8,6 +8,8 @@ alias su="sudo -s"
 alias ls="ls -a1 --icons --group-directories-first"
 alias tree="exa -T"
 
+alias feh="feh --no-fehbg "
+
 #cd
 alias cdtemp='cd $(mktemp -d)'
 mkcd() {

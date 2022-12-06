@@ -13,10 +13,10 @@ super + n
 	bspc desktop -f '^4'; neovide
 
 super + p
-	picom --config ~/.config/picom/picom.conf
+	killall picom; picom --config ~/.config/picom/picom.conf
 
 super + shift + p
-	killall picom
+	killall picom; picom --config ~/.config/picom/no-transparency.conf
 
 # program launcher
 super + @space
