@@ -1,17 +1,21 @@
 #!/bin/bash
+
+# vim: set tabwith=4
 set -euo pipefail
 IFS=$'\n\t'
 
 if [ "$1" ]; then
-  case "$1" in
-    i)   paru -S "$2" ;;
-    si)  paru -S "$2" ;;
-    r)   paru -R "$2" ;;
-    sr)  paru -R "$2" ;;
-    up)  paru         ;;
-	sup) paru         ;;
-    *)  echo "unknown command '$1'" ;;
-  esac
+    case "$1" in
+        i)   paru -S "$2" ;;
+        si)  paru -S "$2" ;;
+        r)   paru -R "$2" ;;
+        sr)  paru -R "$2" ;;
+        up)  paru         ;;
+        sup) paru         ;;
+        c)        pacman -Rsn "$(pacman -Qdtq)" ;;
+        sc)  sudo pacman -Rsn "$(sudo pacman -Qdtq)" ;;
+        *)  echo "unknown command '$1'" ;;
+    esac
 else
-  echo "Please specify command"
+    echo "Please specify command"
 fi
