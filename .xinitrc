@@ -1,3 +1,4 @@
 #!/bin/sh
 
-bspwm -c ~/.config/bspwm/bspwmrc
+# bspwm -c ~/.config/bspwm/bspwmrc
+leftwm

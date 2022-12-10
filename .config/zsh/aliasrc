@@ -2,13 +2,15 @@
 
 #doas
 alias s="sudo"
-alias su="sudo -s"
+alias su="gum confirm 'root?' && sudo -s || echo 'never mind'"
 
 #exa
 alias ls="ls -a1 --icons --group-directories-first"
 alias tree="exa -T"
 
 alias feh="feh --no-fehbg "
+
+alias e="$EDITOR"
 
 #cd
 alias cdtemp='cd $(mktemp -d)'
