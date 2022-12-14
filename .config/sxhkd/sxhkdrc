@@ -1,16 +1,18 @@
-# terminal
 super + x
-	 bspc desktop -f '^2'; alacritty
+	# switch to desktop 2; spawn alacritty
+	wmctrl -s 1; alacritty
 
-# browser
 super + b
-	bspc desktop -f '^1'; firefox
+	# switch to desktop 1; spawm brave
+	wmctrl -s 0; brave
 
 super + o
-	bspc desktop -f '^3'; obsidian
+	# switch to desktop 3; swawn obsidian (notes)
+	wmctrl -s 2; obsidian
 
 super + n
-	bspc desktop -f '^4'; neovide
+	# switch to desktop 4; spawm neovide
+	wmctrl -s 3; neovide
 
 super + p
 	killall picom; picom --config ~/.config/picom/picom.conf

@@ -53,7 +53,8 @@
     focus_new_windows: true,
     sloppy_mouse_follows_focus: true,
     keybind: [
-        (command: Execute,                value: "rofi -config ~/.config/leftwm/themes/pixel/nord.rasi -show drun", modifier: ["modkey"], key: "r"),
+        (command: Execute,                value: "dzen2-blob $(acpi | awk '{print $4}')", modifier: ["modkey"], key: "a"),
+        (command: Execute,                value: "rofi -show drun", modifier: ["modkey"], key: "r"),
         (command: Execute,                value: "brave",   modifier: ["modkey"], key: "b"),
         (command: Execute,                value: "alacritty", modifier: ["modkey"], key: "x"),
         (command: CloseWindow,            value: "",          modifier: ["modkey"], key: "q"),

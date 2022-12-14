@@ -1,3 +1,10 @@
+#      _                 _     _       _                  _
+#  ___| |_ __ _ _ __ ___| |__ (_)_ __ | |_ ___  _ __ ___ | |
+# / __| __/ _` | '__/ __| '_ \| | '_ \| __/ _ \| '_ ` _ \| |
+# \__ \ || (_| | |  \__ \ | | | | |_) | || (_) | | | | | | |
+# |___/\__\__,_|_|  |___/_| |_|_| .__(_)__\___/|_| |_| |_|_|
+#                               |_|
+
 # Increase Starship command scan & duration time-outs
 scan_timeout = 80
 command_timeout = 2500
@@ -6,8 +13,8 @@ command_timeout = 2500
 # add_newline = false
 
 # Do not truncate the directory listing
-#[directory]
-#truncation_length = 0
+[directory]
+truncation_length = 0
 
 # Show even very fast command executions in terminal (in ms)
 [cmd_duration]

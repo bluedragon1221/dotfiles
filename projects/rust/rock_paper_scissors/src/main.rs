@@ -2,15 +2,6 @@ use rand::Rng;
 use std::io;
 use std::io::Write;
 
-fn to_symbol(x: i32) -> &'static str {
-    match x {
-        1 => "rock",
-        2 => "paper",
-        3 => "scissors",
-        _ => "Unknown symbol",
-    }
-}
-
 fn main() {
     println!("Rock Paper Scissors");
 
@@ -29,22 +20,22 @@ fn main() {
             Err(_) => panic!("Unknown symbol"),
         };
 
-        to_symbol(guess)
+        guess
     };
 
-    let bot_select = to_symbol(rand::thread_rng().gen_range(1..=3));
+    let bot_select = rand::thread_rng().gen_range(1..=3);
 
     println!("You selected {player_select}");
     println!("Bot selected {bot_select}");
 
     let ret = match (player_select, bot_select) {
         (a, b) if a == b => "Tie!",
-        ("rock", "paper") => "Bot Wins!",
-        ("rock", "scissors") => "You Win!",
-        ("paper", "rock") => "You Win!",
-        ("paper", "scissors") => "Bot Wins!",
-        ("scissors", "rock") => "Bot Wins!",
-        ("scissors", "paper") => "You Win!",
+        (1, 2) => "Bot Wins!", // rock, paper
+        (1, 3) => "You Win!", // rock, scissors
+        (2, 1) => "You Win!", // paper, rock
+        (2, 3) => "Bot Wins!", // paper, scissors
+        (3, 1) => "Bot Wins!", // scissors, rock
+        (3, 2) => "You Win!", // scissors, paper
         (_, _) => "error, unknown symbol",
     };
 
