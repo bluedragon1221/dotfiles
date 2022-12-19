@@ -28,16 +28,17 @@ fn main() {
     println!("You selected {player_select}");
     println!("Bot selected {bot_select}");
 
-    let ret = match (player_select, bot_select) {
-        (a, b) if a == b => "Tie!",
-        (1, 2) => "Bot Wins!", // rock, paper
-        (1, 3) => "You Win!", // rock, scissors
-        (2, 1) => "You Win!", // paper, rock
-        (2, 3) => "Bot Wins!", // paper, scissors
-        (3, 1) => "Bot Wins!", // scissors, rock
-        (3, 2) => "You Win!", // scissors, paper
-        (_, _) => "error, unknown symbol",
-    };
-
-    println!("{ret}")
+    println!(
+        "{}",
+        match (player_select, bot_select) {
+            (a, b) if a == b => "Tie!",
+            (1, 2) => "Bot Wins!", // rock, paper
+            (1, 3) => "You Win!",  // rock, scissors
+            (2, 1) => "You Win!",  // paper, rock
+            (2, 3) => "Bot Wins!", // paper, scissors
+            (3, 1) => "Bot Wins!", // scissors, rock
+            (3, 2) => "You Win!",  // scissors, paper
+            (_, _) => "error, unknown symbol",
+        },
+    );
 }

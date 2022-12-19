@@ -1,4 +1,5 @@
 #!/bin/sh
 
-# bspwm -c ~/.config/bspwm/bspwmrc
-leftwm
+leftwm &
+
+bash ~/.config/wm/autostart.sh &
