@@ -1,9 +1,12 @@
 ---
 description: Interact with the clipboard using `xclip`
 tags: Linux
+type: tutorial
 ---
+# Prerequisite
+Install `xclip`.
 
-# Tutorial
+# Setup
 ## Copy to Clipboard
 This will copy `"text"` to the clipboard:
 ```sh
@@ -16,6 +19,7 @@ This will output the text you copied
 xclip -out
 ```
 
+# Bonus
 ## Implement Your Own
 Create a file in `~/.cache` called `clipboard`
 ```sh
@@ -39,4 +43,4 @@ clipboard_out() {
 Copy text to clipboard using `xclip`:: `echo "text" | xclip -in`
 <!--SR:!2022-12-21,5,230-->
 Paste text from clipboard using `xclip`:: `xclip -out`
-<!--SR:!2022-12-18,2,230-->
+<!--SR:!2023-01-02,13,250-->

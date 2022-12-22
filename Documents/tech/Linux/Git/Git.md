@@ -1,10 +1,14 @@
 ---
-tags: ignore
+type: moc
 ---
 
+# Description
+Git is a version control system.
+
+# Links
 %% Begin Waypoint %%
-- [[Dotfiles (Home Repo Method)]]
-- [[Dotfiles (Soft Link Method)]]
+- [[Dotfiles (Home Repo)]]
+- [[Dotfiles (Soft Link)]]
 - [[Setup Git SSH]]
 
 %% End Waypoint %%

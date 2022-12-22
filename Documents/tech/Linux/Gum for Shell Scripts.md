@@ -1,6 +1,7 @@
 ---
 description: Make your shell scripts "glamorous" with `gum`
 tags: Linux, flashcards
+type: tutorial
 ---
 
 # Installing
@@ -28,7 +29,7 @@ gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 sudo yum install gum
 ```
 
-# Command Line Uses
+# Command Line Arguments
 ## Gum `input`
 This is used for quick, one line inputs.
 
@@ -60,10 +61,13 @@ Example:
 gum confirm "root?" && sudo -s || echo "never mind"
 ```
 
+## Gum `choose`
+
+
 # Flashcards
 quick, one line input in gum:: `gum input`
 <!--SR:!2022-12-31,15,290-->
 longer, multi line input in gum:: `gun write`
 <!--SR:!2022-12-25,9,250-->
-choose yes or no in gum:: `gum confirm`
-<!--SR:!2022-12-18,2,230-->
+yes or no in gum:: `gum confirm`
+<!--SR:!2022-12-27,7,230-->

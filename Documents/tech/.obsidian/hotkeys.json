@@ -10,5 +10,21 @@
   "file-explorer:new-file-in-new-pane": [],
   "workspace:goto-last-tab": [],
   "editor:insert-link": [],
-  "markdown:toggle-preview": []
+  "markdown:toggle-preview": [],
+  "homepage:open-homepage": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:open-search-replace": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ]
 }

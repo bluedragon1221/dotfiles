@@ -2,12 +2,16 @@
   "accentColor": "",
   "theme": "obsidian",
   "cssTheme": "80s Neon",
-  "interfaceFontFamily": "Inter",
-  "textFontFamily": "Inter",
+  "interfaceFontFamily": "Inter Nerd Font",
+  "textFontFamily": "Inter Nerd Font",
   "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
   "showViewHeader": true,
   "enabledCssSnippets": [
+    "outline",
     "dashboard",
-    "dashboard-ReadLineLength"
+    "dashboard-ReadLineLength",
+    "animations",
+    "hider",
+    "external_link_hover"
   ]
 }

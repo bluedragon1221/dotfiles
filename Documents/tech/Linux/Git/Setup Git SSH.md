@@ -1,12 +1,13 @@
 ---
-description: Setup `git` and connect it to Github with SSH
+description: Setup `git` and connect it to Github via SSH
+type: tutorial
 ---
+# Prerequisite
+Install `git`.
+Have a [Github](https://github.com) account.
 
-Install `git` with your distro's package manager.
-Make sure you have a [Github](https://github.com) account.
-
-# Setup Git Email and Username
-Give Git your name and email
+# Set Name and Email
+Give Git your name and email.
 ```sh
 git config --global user.name "Your Name"
 git config --global user.email "Your Email"
@@ -14,7 +15,7 @@ git config --global user.email "Your Email"
 This email will be public on your git commits, so you may want to use your Github noreply email, found in the settings.
 
 ## Master -> Main
-Recently, Github changed the default branch name to main, but git's default is still master. Use this command to switch it:
+Recently, Github changed the default branch name to main, but `git`'s default is still master. Use this command to switch it:
 ```sh
 git config --global init.defaultBranch main
 ```
@@ -26,7 +27,7 @@ git config --get user.email
 ```
 
 # Generate SSH Key
-Create an ssh key if it doesn't exist.
+Create an `ssh` key if it doesn't exist.
 ```sh
 [[ ~/.ssh/id_rsa.pub ]] || ssh-keygen -C $(git config --get user.email)
 ```
