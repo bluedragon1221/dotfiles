@@ -18,7 +18,7 @@ super + e
  wmctrl -s 3; emacs
 
 # program launcher
-super + @space
+alt + @space
  rofi -show drun
 
 ### BSPWM HOTKEYS ###
