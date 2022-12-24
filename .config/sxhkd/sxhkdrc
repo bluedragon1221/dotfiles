@@ -2,6 +2,9 @@
 super + x
  wmctrl -s 1; alacritty
 
+super + shift + x
+	bspc rule -a Alacritty -o state=floating follow=on center=true rectangle=640x360+0+0 && alacritty
+
 # switch to desktop 1; start brave
 super + b
  wmctrl -s 0; brave

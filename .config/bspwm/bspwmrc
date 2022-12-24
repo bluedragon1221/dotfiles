@@ -20,6 +20,5 @@ bspc config active_border_color \#E84F4F
 
 bspc rule -a qutebrowser desktop='^1'
 bspc rule -a firefox desktop='^1'
-bspc rule -a alacritty desktop='^2'
 bspc rule -a feh state=floating
 
