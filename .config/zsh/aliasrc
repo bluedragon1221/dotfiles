@@ -21,3 +21,6 @@ alias mkdir='mkcd'
 
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 alias neofetch="pfetch"
+alias stopwatch='time cat'
+alias wget='curl -O --retry 999 --retry-max-time 0 -C '
+alias wget='curl -O '

@@ -12,7 +12,6 @@ Quit:: C-x C-c
 ## Zoom
 zoom in:: C-x C-+
 zoom out:: C-x C--
-
 ## Navigation
 Cursor down line (next):: C-n
 <!--SR:!2022-12-19,3,250-->
@@ -28,12 +27,11 @@ Beginning of line:: C-a
 End of line:: C-e
 Beginning of sentence:: M-a
 End of sentence:: M-e
-Backwards by paragraph:: M-{
-<!--SR:!2022-12-18,1,210-->
-Forwards by paragraph:: M-}
 beginning of file:: M-< (M-S-,)
+<!--SR:!2022-12-21,3,268-->
 end of file:: M-\> (M-S-.)
 go to line number:: M-g g
+<!--SR:!2022-12-21,3,268-->
 
 ESC-number C-n/p/f/b (perform motion that number of times)
 
@@ -43,6 +41,7 @@ Cut selected text:: C-w
 Copy selected text:: M-w
 Paste:: C-y
 Cut to end of line:: C-k
+<!--SR:!2022-12-19,1,228-->
 undo:: C-x u
 
 C-x backspace, M-k (backwards/forwards delete the current line)
@@ -59,12 +58,13 @@ C-x k kill a buffer
 
 ## Case change
 capitalize word:: M-c
+<!--SR:!2022-12-20,2,248-->
 uppercase word:: M-u
 lowercase word:: M-l
 
 ## Spell Check
 Spellcheck word:: M-$
-<!--SR:!2022-12-18,1,227-->
+<!--SR:!2022-12-21,3,247-->
 
 ## Search
 C-s to search forward
