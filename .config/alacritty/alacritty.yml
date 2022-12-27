@@ -190,15 +190,11 @@ font:
 
 colors:
   primary:
-<<<<<<< HEAD
     background: '#44454B'
     foreground: '#eaeaea'
     dim_foreground: '#999999'
-=======
     background: '0x1e2030'
     foreground: '0x7f85a3'
-
->>>>>>> 9facc3d10237ce143f763b185c9b8831ea291a9f
   cursor:
     text:   '0x7f85a3'
     cursor: '0x808080'
