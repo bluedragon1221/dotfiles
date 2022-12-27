@@ -33,6 +33,4 @@ alias neofetch="pfetch"
 <<<<<<< HEAD
 alias stopwatch='time cat'
 alias wget='curl -O --retry 999 --retry-max-time 0 -C '
-=======
->>>>>>> 9facc3d10237ce143f763b185c9b8831ea291a9f
 alias wget='curl -O '
