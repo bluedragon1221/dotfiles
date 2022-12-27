@@ -4,25 +4,26 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  use {
-  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  	requires = { {'nvim-lua/plenary.nvim'} }
-}
-  use({
-	'rose-pine/neovim',
-    	as = 'rose-pine',
-    	config = function()
-        	vim.cmd('colorscheme rose-pine')
-    	end
-})
+    use({
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  	    requires = {{'nvim-lua/plenary.nvim'},
+                    {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}}
+    })
+    use({
+        'rose-pine/neovim',
+            as = 'rose-pine',
+            config = function()
+        	    vim.cmd('colorscheme rose-pine')
+    	    end
+    })
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  use { 'VonHeikemen/lsp-zero.nvim',
-  	requires = {
+    use { 'VonHeikemen/lsp-zero.nvim',
+        requires = {
     		-- LSP Support
     		{'neovim/nvim-lspconfig'},
     		{'williamboman/mason.nvim'},
@@ -38,8 +39,7 @@ return require('packer').startup(function(use)
 
     		-- Snippets
     		{'L3MON4D3/LuaSnip'},
-    		{'rafamadriz/friendly-snippets'},
-  	}
-}
-
+            {'rafamadriz/friendly-snippets'},
+  	    }
+    }
 end)
