@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+[[ -f ~/bin/pkg ]] && rm ~/bin/pkg
+
+command -v pacman >/dev/null && pkg=pacman
+command -v apt    >/dev/null && pkg=apt
+command -v dnf    >/dev/null && pkg=dnf
+
+command -v paru   >/dev/null && pkg=paru # override pacman
+
+ln -sf ~/bin/pkg_$pkg ~/bin/pkg
+unset pkg
