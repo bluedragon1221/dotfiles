@@ -1,22 +1,52 @@
-#      _                 _     _       _                  _
-#  ___| |_ __ _ _ __ ___| |__ (_)_ __ | |_ ___  _ __ ___ | |
-# / __| __/ _` | '__/ __| '_ \| | '_ \| __/ _ \| '_ ` _ \| |
-# \__ \ || (_| | |  \__ \ | | | | |_) | || (_) | | | | | | |
-# |___/\__\__,_|_|  |___/_| |_|_| .__(_)__\___/|_| |_| |_|_|
-#                               |_|
+format = """
+$directory\
+$git_branch\
+$git_status\
+$status
+"""
+command_timeout = 5000
+# Disable the blank line at the start of the prompt
+add_newline = false
 
-# Increase Starship command scan & duration time-outs
-scan_timeout = 80
-command_timeout = 2500
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+format = '[$user ]($style)'
 
-# Do not add new line
-# add_newline = false
-
-# Do not truncate the directory listing
 [directory]
-truncation_length = 0
+format = "[$path]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-# Show even very fast command executions in terminal (in ms)
-[cmd_duration]
-min_time = 5
-show_milliseconds = true
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[git_branch]
+symbol = ""
+style = "fg:"#7f85a3"
+format = '[$symbol $branch]($style)'
+
+[git_status]
+style = "fg:"#7f85a3"
+format = '[ $all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = '[ $time ]($style)'
+
+[status]
+symbol = '[](fg:red)'
+success_symbol = '[](fg:green)'
+format = '$symbol '
+disabled = false

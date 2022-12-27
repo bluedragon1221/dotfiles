@@ -9,8 +9,15 @@ autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 
 # starship prompt
-# eval "$(starship init zsh)"
-PROMPT="%F{blue}%~%f %B%(?.%F{green}.%F{red})λ%f%b "
+## eval "$(starship init zsh)"
+
+# ...or not
+PROMPT="%F{blue}%~%f %B%(?.%F{green}.%F{red})%f%b "
+
+reset-cursor() {
+  printf '\033]50;CursorShape=1\x7'
+}
+export PROMPT="$(reset-cursor)$PROMPT"
 
 PATH=~/bin:$PATH
 EDITOR=nvim

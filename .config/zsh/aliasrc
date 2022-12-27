@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#doas
+# doas
 alias s="sudo"
 alias su="gum confirm 'root?' && sudo -s || echo 'never mind'"
 
-#exa
+# exa
 alias ls="exa -a1 --icons --group-directories-first"
 alias tree="exa -T"
 
@@ -12,12 +12,21 @@ alias feh="feh --no-fehbg "
 
 alias e="$EDITOR"
 
-#cd
+# cd
 alias cdtemp='cd $(mktemp -d)'
 mkcd() {
 	mkdir -pv "$@" && cd "$_" || exit
 }
 alias mkdir='mkcd'
+
+# trash
+trash() {
+	case "$1" in
+		-*) mv $2 ~/.trash/ ;;
+		*) mv $1 ~/.trash/ ;;
+	esac
+}
+alias rm="trash"
 
 alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 alias neofetch="pfetch"

@@ -20,8 +20,11 @@ super + n
 super + e
  wmctrl -s 3; emacs
 
+super + shift + p
+	flameshot gui -p ~/Pictures/screenshots/
+
 # program launcher
-alt + @space
+super + @space
  rofi -show drun
 
 ### BSPWM HOTKEYS ###
@@ -41,9 +44,10 @@ super + g
  bspc node -s biggest.window
 
 # set the window state
-super + {t,shift + t,s}
- bspc node -t {tiled,pseudo_tiled,floating}
-
+super + t
+ bspc node -t tiled
+super + shift + f
+ bspw note -t floating
 super + f
  wmctrl -r :ACTIVE: -b toggle,fullscreen
 
