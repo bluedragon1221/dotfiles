@@ -14,12 +14,9 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 # ...or not
 PROMPT="%F{blue}%~%f %B%(?.%F{green}.%F{red})%f%b "
 
-reset-cursor() {
-  printf '\033]50;CursorShape=1\x7'
-}
-export PROMPT="$(reset-cursor)$PROMPT"
-
+chmod +x ~/bin/*
 PATH=~/bin:$PATH
+
 EDITOR=nvim
 
 . $ZDOTDIR/xdg.sh

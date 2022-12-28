@@ -7,16 +7,17 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use({
+    use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  	    requires = {{'nvim-lua/plenary.nvim'},
-                    {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}}
-    })
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
     use({
-        'rose-pine/neovim',
-            as = 'rose-pine',
+        'ghifarit53/tokyonight-vim',
+            as = 'tokyonight',
             config = function()
-        	    vim.cmd('colorscheme rose-pine')
+        	    vim.cmd('colorscheme tokyonight')
     	    end
     })
 
