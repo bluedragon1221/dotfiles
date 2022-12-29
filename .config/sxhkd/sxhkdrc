@@ -1,81 +1,101 @@
-# switch to desktop 2; start alacritty
+# Applications {{{
+## Terminal
 super + x
  wmctrl -s 1; alacritty
 
+## Floating Terminal
 super + shift + x
 	bspc rule -a Alacritty -o state=floating follow=on center=true rectangle=640x360+0+0 && alacritty
 
-# switch to desktop 1; start brave
+## Brave
 super + b
  wmctrl -s 0; brave
 
-# switch to desktop 3; start obsidian (notes)
+## Obsidian
 super + o
  wmctrl -s 2; obsidian
 
-# switch to desktop 4; start neovide
+## Neovide
 super + n
  wmctrl -s 3; neovide
 
+## Emacs
 super + e
  wmctrl -s 3; emacs
 
+## Flameshot
 super + shift + p
 	flameshot gui -p ~/Pictures/screenshots/
 
-# program launcher
+## Rofi
 super + @space
  rofi -show drun
+# }}}
 
-### BSPWM HOTKEYS ###
-
-# quit/restart bspwm
+# BSPWM {{{
+## Restart
 super + shift + r
  bspc wm -r && pkill -USR1 -x sxhkd
 
+## Close Window
 super + q
  wmctrl -c :ACTIVE:
 
+## Quit
 super + shift + q
  killall bspwm
 
-# swap the current node and the biggest window
+## Swap Current Node with Biggest Node
 super + g
  bspc node -s biggest.window
 
-# set the window state
+## Set Window State {{{
+### Tiled
 super + t
  bspc node -t tiled
+
+### Floating
 super + shift + f
  bspw note -t floating
+
+### Fullscreen
 super + f
  wmctrl -r :ACTIVE: -b toggle,fullscreen
+## }}}
 
+## Goto Desktop
 super + {1-9,0}
  wmctrl -s {0-9}
 
+## Send Window to Desktop
 super + shift + {1-9,0}
- wmctrl -r :ACTIVE: -t {0-9}\
- wmctrl -s {0-9}
+ wmctrl -r :ACTIVE: -t {0-9}
 
+## Window Resize
 super + alt + {Left,Down,Up,Right}
  STEP=10; SELECTION={1,2,3,4}; \
  bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
  bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+# }}}
 
-### EXTRA ###
-
+# Volume {{{
+## Volume +5/-5
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
  pactl set-sink-volume 0 {+5%, -5%, toggle} && dzen2-blob $(pamixer --get-volume)
 
+# Volume +1/-1
 shift + {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
  pactl set-sink-volume 0 {+1%, -1%, toggle} && dzen2-blob $(pamixer --get-volume)
+# }}}
 
+# What Time is it?
 super + z
  dzen2-blob $(date +'%I:%M')
 
+# What's my Battery?
 super + a
  dzen2-blob $(acpi | awk '{print $4}')
 
+# Quick Shutdown
 ctrl + alt + Delete
  shutdown now

@@ -12,7 +12,7 @@ if [ "$1" ]; then
         sr)  paru -R "$2" ;;
         up)  paru         ;;
         sup) paru         ;;
-        sc) for i in $(sudo pacman -Qdtq); do sudo pacman -Rsn $i; done ;;
+        sc) for i in $(pacman -Qdtq); do sudo pacman -Rsn $i; done ;;
         *)  echo "unknown command '$1'" ;;
     esac
 else
