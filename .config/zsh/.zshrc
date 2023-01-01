@@ -12,7 +12,7 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 ## eval "$(starship init zsh)"
 
 # ...or not
-PROMPT="%F{blue}%~%f %B%(?.%F{green}.%F{red})%f%b "
+PROMPT="%F{blue}%~%f %B%(?.%F{green}.%F{red})λ%f%b "
 
 chmod +x ~/bin/*
 PATH=~/bin:$PATH

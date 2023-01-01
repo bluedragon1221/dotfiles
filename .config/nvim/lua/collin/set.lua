@@ -1,26 +1,35 @@
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- vim:foldmethod=marker
 
-vim.opt.foldmethod = marker
+local o = vim.o
+local g = vim.g 
 
-vim.opt.smartindent = true
+-- Tabs {{{
+o.tabstop = 4
+o.softtabstop = 4
+o.shiftwidth = 4
+o.expandtab = true
+-- }}}
 
-vim.opt.modelines = 1
+o.smartindent = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+o.modelines = 1
 
-vim.opt.termguicolors = true
+o.hlsearch = false
+o.incsearch = true
 
-vim.scrolloff = 15
-vim.opt.signcolumn = "yes"
+o.scrolloff = 15
+o.signcolumn = "yes"
 
-vim.g.mapleader = " "
+o.cursorline = false
+o.cursorcolumn = false
 
-vim.g.loaded_perl_provider = 0
-vim.g.loaded_ruby_provider = 0
-vim.g.loaded_node_provider = 0
-vim.g.loaded_python_provider = 0
-vim.g.loaded_python3_provider = 0
+o.backup = false
+o.writebackup = false
+o.undofile = true
+o.swapfile = false
+
+o.splitright = true
+
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
+g.loaded_node_provider = 0

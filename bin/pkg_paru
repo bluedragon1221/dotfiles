@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # vim: set tabwith=4
 set -euo pipefail
 IFS=$'\n\t'
@@ -12,7 +11,7 @@ if [ "$1" ]; then
         sr)  paru -R "$2" ;;
         up)  paru         ;;
         sup) paru         ;;
-        sc) for i in $(pacman -Qdtq); do sudo pacman -Rsn $i; done ;;
+        sc) for i in $(pacman -Qdtq); do sudo pacman -Rsn $i; done; sudo pacman -Scc ;;
         *)  echo "unknown command '$1'" ;;
     esac
 else

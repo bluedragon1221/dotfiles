@@ -1,4 +1,4 @@
---vim: foldmethod=marker
+--vim:foldmethod=marker
 
 return require('packer').startup(function(use)
     --- Packer Updates Itself
@@ -13,8 +13,7 @@ return require('packer').startup(function(use)
     ---- Replacement Line
     use { 'nvim-lualine/lualine.nvim',
         requires = {
-            'kyazdani42/nvim-web-devicons',
-            opt = true
+            'kyazdani42/nvim-web-devicons'
         }
     }
     --}}}
@@ -42,8 +41,6 @@ return require('packer').startup(function(use)
   	    }
     }
     --}}}
-    
-    use 'm4xshen/autoclose.nvim'
     
     use { 'junegunn/fzf.vim',
         requires = {

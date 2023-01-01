@@ -1,38 +1,49 @@
 -- vim:foldmethod=marker
 
+local function map(mode, key, command)
+    vim.keymap.set(mode, key, command, {silent = true})
+end
+
+vim.g.mapleader = " "
+
 -- Basic Commands {{{
 --> Commands that get me flying through nvim 
 
 --- Exit Editor, Stay in Nvim
-vim.keymap.set("n", "<C-w>", vim.cmd.Ex)
+map("n", "<C-w>", vim.cmd.Ex)
 
 --- Exit
-vim.keymap.set("n", "<C-q>", vim.cmd.q)
+map("n", "<C-q>", vim.cmd.q)
 
 --- Save
-vim.keymap.set("n", "<C-s>", vim.cmd.w)
-vim.keymap.set("i", "<C-s>", vim.cmd.w)
+map("n", "<C-s>", vim.cmd.w)
+map("i", "<C-s>", vim.cmd.w)
+
+-- Source
+map("n", "<C-o>", vim.cmd.so)
+map("n", "<C-o>", vim.cmd.so)
+
+map("n", "<C-x>", ":vnew term://zsh<CR>i")
 -- }}}
 
 -- Toggles {{{
+--> Toggle things
+
 --- Toggle Line Numbers
-vim.keymap.set("n", "<C-r>", "nu! rnu!")
+map("n", "<C-r>", ":set nu! rnu!<CR>")
 
 --- Toggle Code Folds
-vim.keymap.set("n", "<C-a>", "za")
+map("n", "<C-a>", "za")
 
 -- Easy Wrap Selection
-vim.keymap.set("v", "(", "<ESC>`>a)<ESC>`<i(<ESC>")
-vim.keymap.set("v", "{", "<ESC>`>a}<ESC>`<i{<ESC>")
+map("v", "(", "<ESC>`>a)<ESC>`<i(<ESC>")
+map("v", "{", "<ESC>`>a}<ESC>`<i{<ESC>")
 -- }}}
 
 -- Stolen from Emacs {{{
 --> Things I like about Emacs
 
 --- Visual Mode
-vim.keymap.set("i", "<C-Space>", "<ESC>v")
-vim.keymap.set("n", "<C-Space>", "v")
-
---- Scratch Buffer
-vim.keymap.set("n", "<C-;>", vim.cmd.new)
+map("i", "<C-Space>", "<ESC>v")
+map("n", "<C-Space>", "v")
 -- }}}

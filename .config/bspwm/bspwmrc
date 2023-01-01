@@ -1,7 +1,10 @@
 #!/bin/bash
 bash ~/.config/polybar/launch.sh
-feh --no-fehbg --bg-fill --randomize ~/Pictures/wallpaper/*
 sxhkd &
+
+# [[ -f ~/Pictures/wallpaper/current ]] && feh --bg-fill ~/Pictures/wallpaper/current || feh --bg-fill --randomize ~/Pictures/wallpaper/*
+feh --bg-fill --force-aliasing ~/Pictures/wallpaper/pixel/Title_Image_Night.png
+
 
 xsetroot -cursor_name left_ptr
 
