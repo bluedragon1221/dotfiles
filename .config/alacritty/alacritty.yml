@@ -1,4 +1,4 @@
-#vim:foldmethod=marker
+# vim:foldmethod=marker
 
 # Window {{{
 window:
@@ -19,30 +19,30 @@ window:
 font:
   ## Regular Font Style
   normal:
-    family: scientifica
-    #family: JetBrainsMono Nerd Font Mono
+    # family: scientifica
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
   
   ## Bold Font Style
   bold:
-    family: scientifica
-    #family: JetBrainsMono Nerd Font Mono
+    # family: scientifica
+    family: JetBrainsMono Nerd Font Mono
     style: Bold
 
   ## Italic Font Style
   italic:
-    family: scientifica
-    #family: JetBrainsMono Nerd Font Mono
+    # family: scientifica
+    family: JetBrainsMono Nerd Font Mono
     style: Italic
   
   ## Bolt Italic Font Style
   bold_italic:
-    family: scientifica
-    #family: JetBrainsMono Nerd Font Mono
+    # family: scientifica
+    family: JetBrainsMono Nerd Font Mono
     style: Bold Italic
 
   ## Font Size
-  size: 13.0
+  size: 11.0
 # }}}
 
 # Colors {{{
