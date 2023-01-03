@@ -12,7 +12,7 @@ window:
   dynamic_padding: true
 
   ## Background Opacity
-  opacity: 0.60
+  opacity: 0.80
 # }}}
 
 # Font {{{
@@ -53,7 +53,7 @@ schemes:
   tokyo-night: &tokyo-night
     # Default colors
     primary:
-      background: '0x1a1b26'
+      background: '#1a1b26'
       foreground: '0xa9b1d6'
 
     # Normal colors

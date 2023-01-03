@@ -22,8 +22,8 @@ alias mkdir='mkcd'
 # trash
 trash() {
 	case "$1" in
-		-*) mv $2 ~/.trash/ ;;
-		*) mv $1 ~/.trash/ ;;
+		-*) mv $2 ~/.local/share/trash/ ;;
+		*) mv $1 ~/.local/share/trash/ ;;
 	esac
 }
 alias rm="trash"
@@ -32,3 +32,4 @@ alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 alias neofetch="pfetch"
 alias stopwatch='time cat'
 alias x='exit'
+alias curl_wget="curl -JLO "

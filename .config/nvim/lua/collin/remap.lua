@@ -8,22 +8,14 @@ vim.g.mapleader = " "
 
 -- Basic Commands {{{
 --> Commands that get me flying through nvim 
+    -- Exit
+    map("n", "<C-q>", vim.cmd.q)
 
---- Exit Editor, Stay in Nvim
-map("n", "<C-w>", vim.cmd.Ex)
+    -- Save
+    map("n", "<C-s>", vim.cmd.w)
+    map("i", "<C-s>", vim.cmd.w)
 
---- Exit
-map("n", "<C-q>", vim.cmd.q)
-
---- Save
-map("n", "<C-s>", vim.cmd.w)
-map("i", "<C-s>", vim.cmd.w)
-
--- Source
-map("n", "<C-o>", vim.cmd.so)
-map("n", "<C-o>", vim.cmd.so)
-
-map("n", "<C-x>", ":vnew term://zsh<CR>i")
+    map("n", "<C-x>", ":vnew term://zsh<CR>i")
 -- }}}
 
 -- Toggles {{{
@@ -38,6 +30,9 @@ map("n", "<C-a>", "za")
 -- Easy Wrap Selection
 map("v", "(", "<ESC>`>a)<ESC>`<i(<ESC>")
 map("v", "{", "<ESC>`>a}<ESC>`<i{<ESC>")
+
+-- Toggle Netrw
+map("n", "<C-e>", vim.cmd.Lexplore)
 -- }}}
 
 -- Stolen from Emacs {{{
@@ -47,3 +42,4 @@ map("v", "{", "<ESC>`>a}<ESC>`<i{<ESC>")
 map("i", "<C-Space>", "<ESC>v")
 map("n", "<C-Space>", "v")
 -- }}}
+

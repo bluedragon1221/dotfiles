@@ -9,3 +9,4 @@ export LESSHISTFILE=/dev/null
 export XAUTHORITY=~/.cache/xauthority
 export CARGO_HOME=~/.local/share/cargo
 export RUSTUP_HOME=~/.local/share/rustup
+export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc

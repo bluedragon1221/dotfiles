@@ -1,9 +1,10 @@
 #!/bin/bash
 bash ~/.config/polybar/launch.sh
+picom --config ~/.config/picom/picom.conf &
 sxhkd &
 
 # [[ -f ~/Pictures/wallpaper/current ]] && feh --bg-fill ~/Pictures/wallpaper/current || feh --bg-fill --randomize ~/Pictures/wallpaper/*
-feh --bg-fill --force-aliasing ~/Pictures/wallpaper/pixel/Title_Image_Night.png
+feh --no-fehbg --bg-fill --randomize ~/Pictures/wallpaper/*
 
 
 xsetroot -cursor_name left_ptr
@@ -24,4 +25,5 @@ bspc config active_border_color \#E84F4F
 bspc rule -a qutebrowser desktop='^1'
 bspc rule -a firefox desktop='^1'
 bspc rule -a feh state=floating
+bspw rule -a emacs state=tiling 
 
