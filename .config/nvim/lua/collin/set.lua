@@ -32,6 +32,11 @@ vim.cmd.set("noshowmode")
 
 vim.cmd.set("nocompatible")
 
+vim.cmd([[
+au TextYankPost * silent! lua vim.highlight.on_yank()
+
+]])
+
 o.modelines = 1
 
 o.scrolloff = 15
@@ -42,7 +47,7 @@ o.cursorcolumn = false
 
 o.splitright = true
 
--- o.clipboard = "unnamedplus"
+o.clipboard = "unnamedplus"
 
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0

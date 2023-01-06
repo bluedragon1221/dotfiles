@@ -12,7 +12,7 @@ window:
   dynamic_padding: true
 
   ## Background Opacity
-  opacity: 0.80
+  opacity: 0.95
 # }}}
 
 # Font {{{

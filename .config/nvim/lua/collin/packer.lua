@@ -13,19 +13,18 @@ return require('packer').startup(function(use)
     --- Replacement Line
     use { 'nvim-lualine/lualine.nvim',
         requires = 'kyazdani42/nvim-web-devicons'
-    }
-    --}}}
+    } --}}}
 
     -- LSP Packages {{{
-        use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-        use { 'VonHeikemen/lsp-zero.nvim',
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use { 'VonHeikemen/lsp-zero.nvim',
         requires = {
-            ---- LSP Support
+            --- LSP Support
             {'neovim/nvim-lspconfig'},
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
 
-            ---- Autocompletion
+            --- Autocompletion
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
@@ -33,18 +32,28 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
 
-            ---- Snippets
+            --- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
         }
-    }
+    } --}}}
+
+    -- Text Manupulation {{{
+    use "tpope/vim-surround"
+    use "tpope/vim-commentary"
+    use "raimondi/delimitmate"
     --}}}
 
     use { 'junegunn/fzf.vim',
         requires = 'junegunn/fzf'
     }
-    use { 'ggandor/leap.nvim',
-        requires = 'tpope/vim-repeat'
+    
+    use {'MunifTanjim/prettier.nvim',
+        requires = {
+            'jose-elias-alvarez/null-ls.nvim',
+            'neovim/nvim-lspconfig'
+        }
     }
+
     use('mattn/emmet-vim')
 end)
