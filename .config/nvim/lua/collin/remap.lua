@@ -6,6 +6,8 @@ end
 
 vim.g.mapleader = " "
 
+map("i", "<C-y>", "<ESC>:Emmet ")
+
 -- Basic Commands {{{
 --> Commands that get me flying through nvim 
     -- Exit

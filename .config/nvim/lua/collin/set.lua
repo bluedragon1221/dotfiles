@@ -2,6 +2,13 @@
 local o = vim.o
 local g = vim.g 
 
+-- File Backups {{{
+o.backup = false
+o.writebackup = false
+o.undofile = true
+o.swapfile = false
+-- }}}
+
 -- Tag Length {{{
     
     -- Tab Width: 4
@@ -20,13 +27,6 @@ local g = vim.g
     o.incsearch = true
 
 --}}}
-
--- File Backups {{{
-o.backup = false
-o.writebackup = false
-o.undofile = true
-o.swapfile = false
--- }}}
 
 vim.cmd.set("noshowmode")
 
@@ -47,7 +47,7 @@ o.cursorcolumn = false
 
 o.splitright = true
 
-o.clipboard = "unnamedplus"
+o.clipboard = "unnamed"
 
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
