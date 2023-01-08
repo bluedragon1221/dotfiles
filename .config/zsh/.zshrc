@@ -27,4 +27,3 @@ bindkey '^[[B' history-substring-search-down
 . $ZDOTDIR/aliasrc
 . $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 . $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. $ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh
