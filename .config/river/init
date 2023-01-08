@@ -1,0 +1,27 @@
+#!/bin/bash
+waybar &
+swaybg -i $(find ~/Pictures/wallpaper -type f | shuf -n 1) &
+
+export XKB_DEFAULT_OPTIONS=caps:escape
+
+# River Config
+## Tiling
+rivertile -main-ratio 0.5 &
+riverctl output-layout rivertile
+
+riverctl focus-follows-cursor always
+
+## Keyboard Shortcuts
+mod="Mod4"
+alt="Mod1"
+riverctl map normal $mod Q close
+riverctl map normal $mod+Shift Q exit
+riverctl map normal $mod X spawn 'alacritty'
+riverctl map normal $mod B spawn 'brave'
+riverctl map normal $mod+Shift F toggle-float
+riverctl map normal $mod R spawn "rofi -show drun"
+
+for i in {0..9}; do
+    riverctl map normal $mod $(($i + 1)) set-focused-tags $((1 << $i))
+done
+

@@ -54,6 +54,6 @@ return require('packer').startup(function(use)
             'neovim/nvim-lspconfig'
         }
     }
-
+    use('neoclide/coc-highlight')
     use('mattn/emmet-vim')
 end)

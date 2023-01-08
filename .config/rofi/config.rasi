@@ -1,9 +1,2 @@
-/** Basic config file **/
+@theme "~/.config/rofi/colors.rasi"
 
-configuration {
-  show-icons: true;
-  display-drun: "  ";
-  display-window: "﩯";
-  display-combi: " ";
-}
-@theme "themes/sidetab-nord.rasi"

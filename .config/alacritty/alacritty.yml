@@ -12,7 +12,7 @@ window:
   dynamic_padding: true
 
   ## Background Opacity
-  opacity: 0.95
+  opacity: 0.90
 # }}}
 
 # Font {{{
@@ -20,29 +20,29 @@ font:
   ## Regular Font Style
   normal:
     # family: scientifica
-    family: JetBrainsMono Nerd Font Mono
+    family: Iosevka Term
     style: Regular
   
   ## Bold Font Style
   bold:
     # family: scientifica
-    family: JetBrainsMono Nerd Font Mono
+    family: Iosevka Term
     style: Bold
 
   ## Italic Font Style
   italic:
     # family: scientifica
-    family: JetBrainsMono Nerd Font Mono
-    style: Italic
+    family: Iosevka Term
+    style: Oblique
   
   ## Bolt Italic Font Style
   bold_italic:
     # family: scientifica
-    family: JetBrainsMono Nerd Font Mono
+    family: Iosevka Term
     style: Bold Italic
 
   ## Font Size
-  size: 11.0
+  size: 17.0
 # }}}
 
 # Colors {{{

@@ -19,7 +19,12 @@ PATH=~/bin:$PATH
 
 EDITOR=nvim
 
+# substring search (see below)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 . $ZDOTDIR/xdg.sh
 . $ZDOTDIR/aliasrc
 . $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 . $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. $ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh
