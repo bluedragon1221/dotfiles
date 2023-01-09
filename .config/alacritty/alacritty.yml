@@ -20,25 +20,25 @@ font:
   ## Regular Font Style
   normal:
     # family: scientifica
-    family: Iosevka Term
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
   
   ## Bold Font Style
   bold:
     # family: scientifica
-    family: Iosevka Term
+    family: JetBrainsMono Nerd Font Mono
     style: Bold
 
   ## Italic Font Style
   italic:
     # family: scientifica
-    family: Iosevka Term
+    family: JetBrainsMono Nerd Font Mono
     style: Oblique
   
   ## Bolt Italic Font Style
   bold_italic:
     # family: scientifica
-    family: Iosevka Term
+    family: JetBrainsMono Nerd Font Mono
     style: Bold Italic
 
   ## Font Size

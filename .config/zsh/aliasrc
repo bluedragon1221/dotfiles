@@ -33,3 +33,4 @@ alias neofetch="pfetch"
 alias stopwatch='time cat'
 alias x='exit'
 alias curl_wget="curl -JLO "
+big() {du -h $1 | awk '{print $1}'}

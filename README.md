@@ -9,5 +9,6 @@ configured using [dotfiles home repo method](https://github.com/bluedragon1221/n
 ### /etc/zsh/zshenv ###
 ZDOTDIR=~/.config/zsh
 ```
+## Neovim
+Install `neovim`
 
-## 

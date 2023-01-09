@@ -18,11 +18,6 @@ chmod +x ~/bin/*
 PATH=~/bin:$PATH
 
 EDITOR=nvim
-
-# substring search (see below)
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
 . $ZDOTDIR/xdg.sh
 . $ZDOTDIR/aliasrc
 . $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

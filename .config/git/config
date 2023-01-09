@@ -5,3 +5,5 @@
 	name = Collin Williams
 [color]
 	ui = auto
+[alias]
+	scrub = reset --hard origin/main
