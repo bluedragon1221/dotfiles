@@ -1,14 +1,22 @@
 # dotfiles
 My dotfiles (steadily growing)
 
-configured using [dotfiles home repo method](https://github.com/bluedragon1221/notes/blob/main/Linux/Git/Dotfiles%20(Home%20Repo).md).
+Configured using the [dotfiles home repo method](https://github.com/bluedragon1221/notes/blob/main/Linux/Git/Dotfiles%20(Home%20Repo).md).
 
 # Install
-## move `.zshrc`
+## ZSH
+Install `zsh`
+### Move `.zshrc`
 ```sh
 ### /etc/zsh/zshenv ###
 ZDOTDIR=~/.config/zsh
 ```
+## Terminal Emulator
+Install `Alacritty`
 ## Neovim
 Install `neovim`
+## Window Manager
+Install [`wayland`](https://wayland.freedesktop.org) and [`riverwm`](https://github.com/riverwm/river).
+### Bar
+Install [`waybar`](https://github.com/alexays/waybar).
 

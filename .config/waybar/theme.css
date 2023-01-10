@@ -1,0 +1,27 @@
+/* Manhattan Colorscheme for GTK CSS */
+
+ /* ~/.config/waybar/colors.css */
+
+@define-color accent #56c6b2;
+@define-color bg0 #121519;
+@define-color bg1 #1f242a;
+@define-color bg2 #2d353e;
+@define-color bg3 #3c4652;
+@define-color bg4 #4b5766;
+
+@define-color fg0 #e5e9ec;
+@define-color fg1 #ccd3da;
+@define-color fg2 #b3bdc8;
+@define-color fg3 #a7b3bf;
+@define-color black #101215;
+@define-color red #f46d7e;
+@define-color orange #f4a582;
+@define-color yellow #e8ce9b;
+@define-color green #93c68c;
+@define-color teal #56c6b2;
+@define-color cyan #7ac6db;
+@define-color blue #60aafb;
+@define-color magenta #e397bb;
+@define-color purple #b196f0;
+@define-color white #e5e9ec;
+@define-color gray #617184;

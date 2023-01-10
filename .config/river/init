@@ -1,5 +1,5 @@
 #!/bin/bash
-waybar &
+~/.config/waybar/river/launch.sh
 swaybg -i $(find ~/Pictures/wallpaper -type f | shuf -n 1) &
 
 export XKB_DEFAULT_OPTIONS=caps:escape

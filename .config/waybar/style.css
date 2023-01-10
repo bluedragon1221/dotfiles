@@ -1,0 +1,132 @@
+@import url("theme.css");
+
+* {
+    all: unset;
+}
+
+window#waybar {
+  background-color: @bg0;
+}
+.modules-left {
+    margin-left: 4px;
+}
+
+.modules-right {
+    margin-right: 4px;
+}
+
+/* River Tags */
+#tags button {
+    margin: 4px 2px;
+    padding: 0px 12px;
+    padding-top: 2px;
+    border-radius: 4px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 16px;
+    font-weight: 500;
+    background-color: @bg1;
+    color: @fg0;
+}
+
+#tags button.occupied {
+    color: @yellow;
+}
+
+#tags button.urgent {
+    color: @red;
+}
+
+#tags button.focused {
+    color: @accent;
+    background-color: @bg2 ;
+}
+
+/* Sway Window */
+#window {
+  margin-left: 8px;
+  padding-top: 2px;
+  font-family: "JetBrainsMono Nerd Font Mono";
+  font-weight: 500;
+  font-size: 16px;
+  color: @fg0;
+}
+
+/* Clock */
+#clock {
+    margin: 4px 2px;
+    padding: 0px 12px;
+    padding-top: 2px;
+    border-radius: 4px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 16px;
+    font-weight: 500;
+    background-color: @bg2;
+    color: @fg0;
+}
+
+/* Network */
+#network,
+#network.linked,
+#network.ethernet,
+#network.wifi {
+    background-color: @bg1;
+    color: @magenta;
+}
+
+#network.disabled,
+#network.disconnected {
+    background-color: @magenta;
+    color: @bg1;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    background-color: @bg1;
+    color: @teal;
+}
+
+#pulseaudio.bluetooth {
+    background-color: @blue;
+    color: @bg1;
+}
+
+#pulseaudio.muted {
+    background-color: @red;
+    color: @bg1;
+}
+
+/* CUSTOM MODULES */
+#idle_inhibitor,
+#network,
+#pulseaudio,
+#custom-colorpicker,
+#custom-documents,
+#custom-idle-inhibitor,
+#custom-launcher,
+#custom-nightlight,
+#custom-notifications,
+#custom-power,
+#custom-recorder,
+#custom-screenshot,
+#custom-windows {
+    margin: 4px 2px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    font-family: "Material Icons Round";
+    font-size: 18px;
+}
+
+/* Power Menu */
+#custom-power {
+    margin-right: 0;
+}
+
+.power {
+    background-color: @bg1;
+    color: @red;
+}
+
+.power-active {
+    background-color: @red;
+    color: @bg1;
+}
