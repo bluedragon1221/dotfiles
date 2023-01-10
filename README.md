@@ -4,7 +4,7 @@ My dotfiles (steadily growing)
 Configured using the [dotfiles home repo method](https://github.com/bluedragon1221/notes/blob/main/Linux/Git/Dotfiles%20(Home%20Repo).md).
 
 # Install
-## ZSH
+## Shell
 Install `zsh`
 ### Move `.zshrc`
 ```sh
@@ -12,9 +12,9 @@ Install `zsh`
 ZDOTDIR=~/.config/zsh
 ```
 ## Terminal Emulator
-Install `Alacritty`
-## Neovim
-Install `neovim`
+Install [`alacritty`](https://alacritty.org)
+## Text Editor
+Install [`neovim`](https://neovim.io)
 ## Window Manager
 Install [`wayland`](https://wayland.freedesktop.org) and [`riverwm`](https://github.com/riverwm/river).
 ### Bar
