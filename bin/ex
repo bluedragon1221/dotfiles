@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
 
 if [ -f "$1" ]; then
 	case "$1" in

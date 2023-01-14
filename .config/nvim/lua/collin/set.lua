@@ -29,19 +29,17 @@ o.swapfile = false
 --}}}
 
 vim.cmd.set("noshowmode")
-
 vim.cmd.set("nocompatible")
 
-vim.cmd([[
-au TextYankPost * silent! lua vim.highlight.on_yank()
+o.timeoutlen = 500
 
-]])
+vim.api.nvim_create_autocmd("TextYankPost", {
+  command = "silent! lua vim.highlight.on_yank()",
+})
 
-o.modelines = 1
+o.modelines = 5
 
-o.scrolloff = 15
 o.signcolumn = "no"
-
 o.cursorline = false
 o.cursorcolumn = false
 

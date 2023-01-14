@@ -1,23 +1,18 @@
 #!/bin/bash
 
 # doas
-alias s="sudo"
 alias su="gum confirm 'root?' && sudo -s || echo 'never mind'"
 
 # exa
 alias ls="exa -a1 --icons --group-directories-first"
 alias tree="exa -T"
 
-alias feh="feh --no-fehbg "
-
-alias e="$EDITOR"
-
 # cd
 alias cdtemp='cd $(mktemp -d)'
 mkcd() {
 	mkdir -pv "$@" && cd "$_" || exit
 }
-alias mkdir='mkcd'
+# alias mkdir='mkcd'
 
 # trash
 trash() {
@@ -28,9 +23,19 @@ trash() {
 }
 alias rm="trash"
 
-alias wm_test="Xephyr :5 & sleep 1 ; DISPLAY=:5 "
 alias neofetch="pfetch"
 alias stopwatch='time cat'
 alias x='exit'
 alias curl_wget="curl -JLO "
-big() {du -h $1 | awk '{print $1}'}
+
+big() {
+    du -h $1 | awk '{print $1}'
+}
+
+man() {
+  /usr/bin/man $* | \
+    col -b | \
+    nvim -R -c 'set ft=man nomod nolist' -
+}
+
+alias vimwiki='nvim ~/vimwiki/index.wiki'

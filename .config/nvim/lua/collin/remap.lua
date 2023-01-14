@@ -1,23 +1,19 @@
 -- vim:foldmethod=marker
-
 local function map(mode, key, command)
-    vim.keymap.set(mode, key, command, {silent = true})
+    vim.keymap.set(mode, key, command, { silent = true })
 end
 
 vim.g.mapleader = " "
 
-map("i", "<C-y>", "<ESC>:Emmet ")
-
 -- Basic Commands {{{
 --> Commands that get me flying through nvim 
-    -- Exit
-    map("n", "<C-q>", vim.cmd.q)
-
     -- Save
     map("n", "<C-s>", vim.cmd.w)
-    map("i", "<C-s>", vim.cmd.w)
 
-    map("n", "<C-x>", ":vnew term://zsh<CR>i")
+    -- Quit
+    map("n", "<C-q>", vim.cmd.q)
+
+    map("n", "<leader>t", ":vnew term://zsh<CR>i")
 -- }}}
 
 -- Toggles {{{
@@ -37,11 +33,26 @@ map("v", "{", "<ESC>`>a}<ESC>`<i{<ESC>")
 map("n", "<C-e>", vim.cmd.Lexplore)
 -- }}}
 
--- Stolen from Emacs {{{
---> Things I like about Emacs
+-- Restrict Arrow Keys {{{
+-- map("n", "<Left>",  function() print("Use 'h'") end)
+-- map("n", "<Right>", function() print("Use 'l'") end)
+-- map("n", "<Up>",    function() print("Use 'k'") end)
+-- map("n", "<Down>",  function() print("Use 'j'") end)
 
---- Visual Mode
-map("i", "<C-Space>", "<ESC>v")
-map("n", "<C-Space>", "v")
+-- map("i", "<Left>",  function() print("Use '<M-h>'") end)
+-- map("i", "<Right>", function() print("Use '<M-l>'") end)
+-- map("i", "<Up>",    function() print("Use '<M-k>'") end)
+-- map("i", "<Down>",  function() print("Use '<M-j>'") end)
+-- -- }}}
+
+-- Move in Insert Mode {{{
+map("i", "<M-h>", "<ESC>ha")
+map("i", "<M-j>", "<ESC>gjzza")
+map("i", "<M-k>", "<ESC>gkzza")
+map("i", "<M-l>", "<ESC>la")
 -- }}}
 
+map("n", "<Space>", ":WhichKey '<Space>'<CR>")
+
+map("n", "j", "gjzz")
+map("n", "k", "gkzz")

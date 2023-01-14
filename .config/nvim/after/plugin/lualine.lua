@@ -34,7 +34,7 @@ require('lualine').setup {
     options = {
         theme = bubbles_theme,
         component_separators = '|',
-        disabled_filetypes = { 'netrw', 'shell' }
+        disabled_filetypes = { 'netrw', 'shell', 'man' }
     },
     sections = {
         lualine_a = {

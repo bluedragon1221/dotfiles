@@ -2,9 +2,13 @@
 ~/.config/waybar/river/launch.sh
 swaybg -i $(find ~/Pictures/wallpaper -type f | shuf -n 1) &
 
-export XKB_DEFAULT_OPTIONS=caps:escape
+export XKB_DEFAULT_OPTIONS=custom:super_esc
 
 # River Config
+## Border Color
+riverctl border-color-focused 0x7aa2f7
+riverctl border-color-unfocused 0x24283b
+
 ## Tiling
 rivertile -main-ratio 0.5 &
 riverctl output-layout rivertile
@@ -18,10 +22,22 @@ riverctl map normal $mod Q close
 riverctl map normal $mod+Shift Q exit
 riverctl map normal $mod X spawn 'alacritty'
 riverctl map normal $mod B spawn 'brave'
+riverctl map normal Super F toggle-fullscreen
 riverctl map normal $mod+Shift F toggle-float
-riverctl map normal $mod R spawn "rofi -show drun"
+riverctl map normal $mod spawn "rofi -show drun"
 
 for i in {0..9}; do
     riverctl map normal $mod $(($i + 1)) set-focused-tags $((1 << $i))
 done
+
+riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
+
+# Super + Left Mouse Button to move views
+riverctl map-pointer normal Super BTN_LEFT move-view
+
+# Super + Right Mouse Button to resize views
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+
+riverctl map normal XF pactl set-sink-volume 0 +5%
 

@@ -15,7 +15,7 @@
   "clock": {
     "timezone": "America/Chicago",
     "interval": 60,
-    "format": "{:%a, %b %d  %H:%M}",
+    "format": "{:%a, %b %d  %I:%M}",
     "max-length": 25
   },
   "network": {
