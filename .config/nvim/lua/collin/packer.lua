@@ -21,13 +21,14 @@ return require('packer').startup(function(use)
     -- Eye Candy {{{
         --- Colorscheme
         use { 'ghifarit53/tokyonight-vim',
-        as = 'tokyonight'
-    }
+            requires = 'sheerun/vim-polyglot',
+            as = 'tokyonight'
+        }
 
     --- Replacement Line
     use { 'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
-} --}}}
+        requires = 'kyazdani42/nvim-web-devicons'
+    } --}}}
 
 -- LSP Packages {{{
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -71,14 +72,8 @@ return require('packer').startup(function(use)
     use { 'junegunn/fzf.vim',
         requires = 'junegunn/fzf'
     }
+   
+    use 'nvim-treesitter/playground'
 
-    use { 'MunifTanjim/prettier.nvim',
-        requires = {
-            'jose-elias-alvarez/null-ls.nvim',
-            'neovim/nvim-lspconfig'
-        }
-    }
-
-    use 'liuchengxu/vim-which-key'
-
+    use 'tpope/vim-obsession'
 end)

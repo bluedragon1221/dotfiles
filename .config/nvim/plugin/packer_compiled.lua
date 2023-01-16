@@ -159,11 +159,6 @@ _G.packer_plugins = {
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/collin/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -189,10 +184,10 @@ _G.packer_plugins = {
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["prettier.nvim"] = {
+  playground = {
     loaded = true,
-    path = "/home/collin/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
+    path = "/home/collin/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   tokyonight = {
     loaded = true,
@@ -204,20 +199,25 @@ _G.packer_plugins = {
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-obsession"] = {
+    loaded = true,
+    path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    url = "https://github.com/tpope/vim-obsession"
+  },
   ["vim-pencil"] = {
     loaded = true,
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-pencil",
     url = "https://github.com/preservim/vim-pencil"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-which-key"] = {
-    loaded = true,
-    path = "/home/collin/.local/share/nvim/site/pack/packer/start/vim-which-key",
-    url = "https://github.com/liuchengxu/vim-which-key"
   },
   ["vim-wordy"] = {
     loaded = true,

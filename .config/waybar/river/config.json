@@ -37,7 +37,7 @@
     "format-icons": {
       "headphone": "",
       "headset": "",
-      "default": [ "墳", "奔", "婢" ]
+      "default": [ "婢", "奔", "墳" ]
     },
     "scroll-step": 5,
     "tooltip": false

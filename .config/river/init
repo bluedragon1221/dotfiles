@@ -39,5 +39,6 @@ riverctl map-pointer normal Super BTN_LEFT move-view
 # Super + Right Mouse Button to resize views
 riverctl map-pointer normal Super BTN_RIGHT resize-view
 
-riverctl map normal XF pactl set-sink-volume 0 +5%
+riverctl map normal None XF86AudioRaiseVolume  spawn 'pactl set-sink-volume 0 +5%'
+riverctl map normal None XF86AudioLowerVolume  spawn 'pactl set-sink-volume 0 -5%'
 
