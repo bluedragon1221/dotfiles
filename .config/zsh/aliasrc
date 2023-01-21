@@ -40,3 +40,4 @@ man() {
 
 alias vimwiki='nvim ~/vimwiki/index.wiki'
 alias gs='git status -sb'
+alias tmux="TERM=screen-256color-bce tmux"

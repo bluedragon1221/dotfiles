@@ -52,7 +52,5 @@ map("i", "<M-k>", "<ESC>gkzza")
 map("i", "<M-l>", "<ESC>la")
 -- }}}
 
-map("n", "<Space>", ":WhichKey '<Space>'<CR>")
-
 map("n", "j", "gjzz")
 map("n", "k", "gkzz")

@@ -1,13 +1,11 @@
 #!/bin/bash
-~/.config/waybar/river/launch.sh
-swaybg -i $(find ~/Pictures/wallpaper -type f | shuf -n 1) &
-
-export XKB_DEFAULT_OPTIONS=custom:super_esc
+~/.config/waybar/launch.sh
+swaybg -i ~/Pictures/wallpaper/wallpaper.jpg &
 
 # River Config
 ## Border Color
-riverctl border-color-focused 0x7aa2f7
-riverctl border-color-unfocused 0x24283b
+riverctl border-color-focused 0x88C0D0
+riverctl border-color-unfocused 0xD8DEE9
 
 ## Tiling
 rivertile -main-ratio 0.5 &

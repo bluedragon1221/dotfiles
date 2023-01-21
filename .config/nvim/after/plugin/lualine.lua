@@ -32,7 +32,7 @@ local bubbles_theme = {
 -- Setup {{{
 require('lualine').setup {
     options = {
-        theme = bubbles_theme,
+        theme = nord,
         component_separators = '|',
         disabled_filetypes = { 'netrw', 'shell', 'man' }
     },
