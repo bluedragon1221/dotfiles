@@ -1,0 +1,59 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "modules-left": ["custom/launcher", "river/tags"],
+  "modules-center": ["river/window"],
+  "modules-right": ["network", "pulseaudio", "clock"],
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
+  "spacing": 0,
+  "name": "panel",
+  "mode": "dock",
+  "clock": {
+    "timezone": "America/Chicago",
+    "interval": 60,
+    "format": "{:%a, %b %d  %I:%M}",
+    "max-length": 25
+  },
+  "network": {
+    "format": "直",
+    "format-ethernet": "",
+    "format-wifi": "直",
+    "format-linked": "",
+    "format-disconnected": "睊",
+    "format-disable": "",
+    "tooltip-format-ethernet": "Ethernet {ifname} - IP: {ipaddr} | {bandwidthUpBits} - {bandwidthDownBits}",
+    "tooltip-format-wifi": "Wifi {essid} - Strength: {signalStrength}",
+    "on-click": "nm-connection-editor",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon} ",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [ "婢", "奔", "墳" ]
+    },
+    "scroll-step": 5,
+    "tooltip": false
+  },
+   "river/tags": {
+    "num-tags": 6,
+    "tag-labels": [ "1", "2", "3", "4", "5", "6" ],
+    "disable-click": false
+  },
+  "river/window": {
+    "format": "{}",
+    "max-length": 60
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun"
+  }
+}

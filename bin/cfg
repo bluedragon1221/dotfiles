@@ -2,7 +2,7 @@
 
 if [[ "$1" ]]; then
     case "$1" in
-        nvim) cd ~/.config/nvim; nvim . ;;
+        nvim) cd ~/.config/nvim/; nvim . ;;
         alacritty) nvim ~/.config/alacritty/alacritty.yml ;;
         bspwm) nvim ~/.config/bspwm/bspwmrc ;;
         sxhkd) nvim ~/.config/sxhkd/sxhkdrc ;;
