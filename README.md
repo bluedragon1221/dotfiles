@@ -20,3 +20,7 @@ Install [`wayland`](https://wayland.freedesktop.org) and [`riverwm`](https://git
 ### Bar
 Install [`waybar`](https://github.com/alexays/waybar).
 
+## Script
+```sh
+sudo pacman -S zsh alacritty neovim wayland waybar
+```
