@@ -10,16 +10,29 @@ alias tree="exa -T"
 # cd
 alias cdtemp='cd $(mktemp -d)'
 mkcd() {
-	mkdir -pv "$@" && cd "$_" || exit
+    mkdir -pv "$@" && cd "$_" || exit
 }
 # alias mkdir='mkcd'
 
+# 'ls' after every 'cd'
+if ! (( $chpwd_functions[(I)chpwd_cdls] )); then
+    chpwd_functions+=(chpwd_cdls)
+fi
+function chpwd_cdls() {
+    if [[ -o interactive ]]; then
+        emulate -L zsh
+        clear
+	ls
+    fi
+}
+
+
 # trash
 trash() {
-	case "$1" in
-		-*) mv $2 ~/.local/share/trash/ ;;
-		*) mv $1 ~/.local/share/trash/ ;;
-	esac
+    case "$1" in
+	-*) mv $2 ~/.local/share/trash/ ;;
+	*) mv $1 ~/.local/share/trash/ ;;
+    esac
 }
 alias rm="trash"
 
@@ -33,11 +46,12 @@ big() {
 }
 
 man() {
-  /usr/bin/man $* | \
-    col -b | \
-    nvim -R -c 'set ft=man nomod nolist' -
-}
+    /usr/bin/man $* | \
+	col -b | \
+	nvim -R -c 'set ft=man nomod nolist' -
+    }
 
-alias vimwiki='nvim ~/vimwiki/index.wiki'
-alias gs='git status -sb'
-alias tmux="TERM=screen-256color-bce tmux"
+    alias vimwiki='nvim ~/vimwiki/index.wiki'
+    alias gs='git status -sb'
+    alias tmux="TERM=screen-256color-bce tmux"
+alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)'"

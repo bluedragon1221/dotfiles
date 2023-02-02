@@ -4,7 +4,8 @@
 vim.opt.path:append("**")
 
 -- Display all matching files when we tab complete
-vim.cmd.set("wildmenu")
+vim.opt.wildmenu = true
+vim.opt.wildmode:append("longest", "list")
 
 vim.keymap.set("n", "<C-o>", ":!ls<CR>:find ", { silent = true, noremap = true })
 

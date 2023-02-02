@@ -68,15 +68,23 @@ local function plugins(use)
   use { "wbthomason/packer.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
   use { "nvim-lua/plenary.nvim" }
+
   use { "neovim/nvim-lspconfig",
     event = "BufReadPre",
-    requires = { "williamboman/nvim-lsp-installer", "echasnovski/mini.completion" },
+    requires = { "williamboman/nvim-lsp-installer" },
     config = function()
       require("config.lsp")
-      require('mini.completion').setup()
     end,
   }
+
+  use { "echasnovski/mini.completion",
+    config = function()
+      require('mini.completion')
+    end,
+  }
+
   use 'numirias/semshi'
+
   -- Bootstrap Neovim
   if packer_bootstrap then
     print("Neovim restart is required after installation!")
