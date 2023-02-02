@@ -7,3 +7,6 @@
 [submodule ".config/zsh/almostontop"]
 	path = .config/zsh/almostontop
 	url = https://github.com/Valiev/almostontop
+[submodule ".vscode-oss/extensions/enkia.tokyo-night-0.9.4-universal.1"]
+	path = .vscode-oss/extensions/enkia.tokyo-night-0.9.4-universal.1
+	url = https://github.com/enkia/tokyo-night-vscode-theme
