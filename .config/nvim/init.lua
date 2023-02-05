@@ -1,52 +1,26 @@
-local cmd = vim.cmd
-local fn = vim.fn
-local api = vim.api
-
-local packer_bootstrap = false -- Indicate first time installation
-
--- packer.nvim configuration
-local conf = {
-  profile = {
-    enable = true,
-    threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
-  },
-
-  display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
-    end,
-  },
-}
-
-local function packer_init()
-  -- Check if packer.nvim is installed
-  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({
-      "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path,
-    })
-    cmd([[packadd packer.nvim]])
-  end
-
-  -- Run PackerCompile if there are changes in this file
-  local packerGrp = api.nvim_create_augroup("packer_user_config", { clear = true })
-  api.nvim_create_autocmd(
-    { "BufWritePost" },
-    { pattern = "init.lua", command = "source <afile> | PackerCompile", group = packerGrp }
-  )
+local install_path = '~/.local/share/nvim/site/pack/packer/start/packer.nvim'
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+  packer_bootstrap = vim.fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
--- Plugins
-local function plugins(use)
-  use { 'Mofiqul/vscode.nvim',
-    config = vim.cmd.colorscheme("vscode")
+require('packer').init({
+  opt = true
+})
+
+return require('packer').startup(function(use)
+  -- make sure to add this line to let packer manage itself
+  use 'wbthomason/packer.nvim'
+
+  use { 'arcticicestudio/nord-vim',
   }
+
   use { 'nvim-lualine/lualine.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require('config.lualine')
     end,
   }
+  
   use { 'romgrk/barbar.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
     config = function()
@@ -55,6 +29,7 @@ local function plugins(use)
   }
 
   use { 'ms-jpq/chadtree' }
+  
   use { 'simrat39/symbols-outline.nvim',
     config = function()
       require("symbols-outline").setup({
@@ -63,6 +38,7 @@ local function plugins(use)
       })
     end,
   }
+
   use 'nvim-treesitter/nvim-treesitter'
   use 'NvChad/nvim-colorizer.lua'
   use { "wbthomason/packer.nvim" }
@@ -83,17 +59,6 @@ local function plugins(use)
     end,
   }
 
-  use 'numirias/semshi'
+end)
 
-  -- Bootstrap Neovim
-  if packer_bootstrap then
-    print("Neovim restart is required after installation!")
-    require("packer").sync()
-  end
-end
-
--- packer.nvim
-packer_init()
-local packer = require("packer")
-packer.init(conf)
-packer.startup(plugins)
+vim.cmd.colorscheme("nord")
