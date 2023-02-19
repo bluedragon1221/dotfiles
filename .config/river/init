@@ -1,6 +1,6 @@
 #!/bin/bash
 ~/.config/waybar/launch.sh
-swaybg -i ~/Pictures/wallpaper/wallpaper.jpg &
+swaybg -i ~/img/wallpaper/wallpaper.jpg &
 
 # River Config
 ## Border Color
@@ -18,12 +18,12 @@ mod="Mod4"
 alt="Mod1"
 riverctl map normal $mod Q close
 riverctl map normal $mod+Shift Q exit
-riverctl map normal $mod X spawn 'alacritty'
+riverctl map normal $mod X spawn 'kitty'
+riverctl map normal $mod+Shift X spawn 'alacritty'
 riverctl map normal $mod B spawn 'firefox'
-riverctl map normal $mod R spawn 'rofi -show drun'
+riverctl map normal $mod R spawn 'rofi -show run'
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal $mod+Shift F toggle-float
-riverctl map normal $mod spawn "rofi -show drun"
 
 for i in {0..9}; do
     riverctl map normal $mod $(($i + 1)) set-focused-tags $((1 << $i))

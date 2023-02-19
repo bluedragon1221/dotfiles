@@ -11,8 +11,7 @@ return require('packer').startup(function(use)
   -- make sure to add this line to let packer manage itself
   use 'wbthomason/packer.nvim'
 
-  use { 'arcticicestudio/nord-vim',
-  }
+  use { 'arcticicestudio/nord-vim' }
 
   use { 'nvim-lualine/lualine.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -20,7 +19,7 @@ return require('packer').startup(function(use)
       require('config.lualine')
     end,
   }
-  
+
   use { 'romgrk/barbar.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
     config = function()
@@ -29,7 +28,19 @@ return require('packer').startup(function(use)
   }
 
   use { 'ms-jpq/chadtree' }
-  
+
+  use { "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      vim.opt.list = true
+
+      require("indent_blankline").setup {
+        space_char_blankline = " ",
+        show_current_context = true,
+        show_current_context_start = true,
+      }
+    end
+  }
+
   use { 'simrat39/symbols-outline.nvim',
     config = function()
       require("symbols-outline").setup({
@@ -41,7 +52,6 @@ return require('packer').startup(function(use)
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'NvChad/nvim-colorizer.lua'
-  use { "wbthomason/packer.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
   use { "nvim-lua/plenary.nvim" }
 
@@ -60,5 +70,3 @@ return require('packer').startup(function(use)
   }
 
 end)
-
-vim.cmd.colorscheme("nord")

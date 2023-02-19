@@ -14,28 +14,6 @@ mkcd() {
 }
 # alias mkdir='mkcd'
 
-# 'ls' after every 'cd'
-if ! (( $chpwd_functions[(I)chpwd_cdls] )); then
-    chpwd_functions+=(chpwd_cdls)
-fi
-function chpwd_cdls() {
-    if [[ -o interactive ]]; then
-        emulate -L zsh
-        clear
-	ls
-    fi
-}
-
-
-# trash
-trash() {
-    case "$1" in
-	-*) mv $2 ~/.local/share/trash/ ;;
-	*) mv $1 ~/.local/share/trash/ ;;
-    esac
-}
-alias rm="trash"
-
 alias neofetch="pfetch"
 alias stopwatch='time cat'
 alias x='exit'
@@ -51,7 +29,10 @@ man() {
 	nvim -R -c 'set ft=man nomod nolist' -
     }
 
-    alias vimwiki='nvim ~/vimwiki/index.wiki'
-    alias gs='git status -sb'
-    alias tmux="TERM=screen-256color-bce tmux"
+killall() {
+    kill $(pgrep $1)
+}
+
+alias gs='git status -sb'
+alias tmux="TERM=screen-256color-bce tmux"
 alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)'"

@@ -17,6 +17,8 @@ o.termguicolors = true
 o.undofile = true
 o.updatetime = 250
 
+o.shiftwidth = 4
+
 vim.cmd.set("noshowmode")
 
 o.path:remove("/usr/include")
