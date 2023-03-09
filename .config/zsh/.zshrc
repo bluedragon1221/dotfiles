@@ -14,11 +14,9 @@ export $(dbus-launch)
 
 PATH=~/bin:$PATH:~/.local/share/bin
 EDITOR=nvim
-
-hello
+DISPLAY=:0
 
 . $ZDOTDIR/xdg.sh
 . $ZDOTDIR/aliasrc
-. $ZDOTDIR/cls.zsh
 . $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 . $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

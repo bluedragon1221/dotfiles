@@ -36,3 +36,4 @@ killall() {
 alias gs='git status -sb'
 alias tmux="TERM=screen-256color-bce tmux"
 alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)'"
+alias icat="kitty +kitten icat"
