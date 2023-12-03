@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ "$1" ]]; then
+    case "$1" in
+        nvim) nvim ~/.config/nvim/init.lua ;;
+        alacritty) nvim ~/.config/alacritty/alacritty.yml ;;
+	kitty) nvim ~/.config/kitty/kitty.conf ;;
+	bspwm) nvim ~/.config/bspwm/bspwmrc ;;
+        sxhkd) nvim ~/.config/sxhkd/sxhkdrc ;;
+        polybar) nvim ~/.config/polybar/polybar.config ;;
+        picom) nvim ~/.config/picom/picom.conf ;;
+        rofi) nvim ~/.config/rofi ;;
+        waybar) nvim ~/.config/waybar ;;
+        river) nvim ~/.config/river/init ;;
+	help) cat ~/bin/cfg ;;
+	zshrc) nvim ~/.config/zsh/.zshrc ;;
+	aliasrc) nvim ~/.config/zsh/aliasrc ;;
+	*) echo "Unknown configuration file, $1" ;;
+    esac
+else
+    echo "No configuration file specified"
+fi

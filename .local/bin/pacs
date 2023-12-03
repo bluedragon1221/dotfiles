@@ -1,0 +1,48 @@
+#!/bin/bash
+PACS_LIST=~/.config/pacs.txt
+TO_INSTALL=""
+TO_REMOVE=""
+
+sync() {
+    while IFS=$'\n' read -r line; do
+	package=$(echo $line | sed 's/^[<>] //')
+
+	if echo "$line" | grep "< "; then
+	    echo "will install $package"
+	    TO_INSTALL+=" $package"
+	else
+	    echo "will remove $package"
+	    TO_REMOVE+=" $package"
+	fi
+    done < <(diff $PACS_LIST <(pacman -Qq) | grep "^[<>]")
+
+
+    # Use "${INSTALL_ARRAY[@]}" to pass each element as a separate argument
+    if [[ $TO_INSTALL != "" || $TO_REMOVE != "" ]]; then
+	 # Split the space-separated string into an array
+	read -ra INSTALL_ARRAY <<< "$TO_INSTALL"
+	read -ra REMOVE_ARRAY <<< "$TO_REMOVE"
+	yay -S "${INSTALL_ARRAY[@]}"
+	yay -Rns "${REMOVE_ARRAY[@]}"
+    fi
+}
+
+save() {
+    pacman -Qq > $PACS_LIST
+}
+
+case $1 in
+    save)
+	save
+	cat $PACS_LIST
+    ;;
+    sync)
+	sync
+    ;;
+    edit|"")
+	save
+	nvim ~/.config/pacs.txt
+	sync
+    ;;
+esac
+
