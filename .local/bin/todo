@@ -5,7 +5,7 @@ TODO_FILE=~/Documents/todo.txt
 case $1 in
   add) echo $2 >> $TODO_FILE ;;
   ls) cat $TODO_FILE ;;
-  rm) grep -v $1 $TODO_FILE > /tmp/tempfile && mv /tmp/tempfile $1 ;;
+  rm) grep -v $1 $TODO_FILE > $TODO_FILE ;;
   clear) echo "" > $TODO_FILE ;;
   *) echo "Unknown Command: $1"
 esac
