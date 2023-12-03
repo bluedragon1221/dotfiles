@@ -1,5 +1,3 @@
-# This project is abandon. I switched to home-manager: new dots are [here](https://github.com/bluedragon1221/hm-dots)
-
 # dotfiles
 My dotfiles (steadily growing)
 
