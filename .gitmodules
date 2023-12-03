@@ -1,3 +1,6 @@
 [submodule ".vscode-oss/extensions/enkia.tokyo-night-0.9.4-universal.1"]
 	path = .vscode-oss/extensions/enkia.tokyo-night-0.9.4-universal.1
 	url = https://github.com/enkia/tokyo-night-vscode-theme
+[submodule ".config/zsh"]
+	path = .config/zsh
+	url = git@github.com:bluedragon1221/zsh-config
