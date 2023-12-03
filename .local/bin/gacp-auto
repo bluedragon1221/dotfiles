@@ -1,6 +1,0 @@
-#!/bin/bash
-
-git add .
-# I don't care if this is "bad practice"
-git commit -am "$(date)"
-git push
