@@ -6,7 +6,6 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu ~/.config/sway/menu.sh
-set $browser qutebrowser
 
 ### Borders
 default_border pixel 2
@@ -20,7 +19,7 @@ client.unfocused #282C34 #282C34 #282C34
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * background ~/Pictures/wallpaper/black-white150.jpg fill
+output * background ~/Pictures/ocean.jpg fill
 #
 # Example configuration:
 #
@@ -46,7 +45,7 @@ output * background ~/Pictures/wallpaper/black-white150.jpg fill
 # Example configuration:
 #
 input "type:touchpad" {
-    dwt enabled
+    dwt disabled
     tap enabled
     natural_scroll disabled
     middle_emulation disabled
