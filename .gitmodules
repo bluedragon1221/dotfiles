@@ -4,3 +4,9 @@
 [submodule ".config/zsh"]
 	path = .config/zsh
 	url = git@github.com:bluedragon1221/zsh-config
+[submodule ".mozilla/firefox/collin.default-release/edge-frfox"]
+	path = .mozilla/firefox/collin.default-release/edge-frfox
+	url = https://github.com/bmFtZQ/edge-frfox
+[submodule ".mozilla/firefox/collin.default-release/chrome"]
+	path = .mozilla/firefox/collin.default-release/chrome
+	url = https://github.com/bmFtZQ/edge-frfox
