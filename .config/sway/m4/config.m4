@@ -1,11 +1,22 @@
 define(USER, collin)
-define(script_dir, /home/USER/.config/sway/scripts)
-define(m4_dir, /home/USER/.config/sway/m4)
+define(cfg_dir, /home/USER/.config/sway)
+define(m4_dir, cfg_dir/m4)
+define(user_bin, /home/USER/.local/bin)
 
-dnl == Keybindings ==
 define(mod, Mod4)
-include(m4_dir/localkeys.m4)
-include(m4_dir/globalkeys.m4)
+define(term, foot)
+define(menu, user_bin/app_menu.sh)
+define(clip_hist, user_bin/clipboard_history.sh)
+define(clip_edit, user_bin/clipboard_edit.sh)
+define(wallpaper, /home/USER/Pictures/wallpapers/ocean.jpg)
+define(cursor, "Vimix-white-cursors")
+
+include(m4_dir/dsl.m4)
+include(m4_dir/keys.m4)
+include(m4_dir/bar.m4)
+
+output * bg wallpaper fill
+seat seat0 xcursor_theme cursor
 
 dnl == Input Devices ==
 input "type:touchpad" {
@@ -25,20 +36,5 @@ smart_borders on
 gaps inner 10
 client.focused #61AFEF #61AFEF #61AFEF 
 client.unfocused #282C34 #282C34 #282C34
-
-dnl == Status Bar ==
-bar {
-    position bottom
-    status_command while script_dir/status.sh; do sleep 1; done
-    mode hide
-    modifier mod
-    workspace_buttons no
-    height 31
-    font "Iosevka Nerd Font" 12
-    colors {
-        statusline #abb2bf
-        background #353B45
-    }
-}
 
 include(m4_dir/systemd-user.conf)
